@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+
+var curchecks = 0;
+
+function changed_cb(new_cb) {
+  var i=0;
+
+  if(new_cb != 1) self.document.rc.sb_chk.checked = 0;
+  if(new_cb != 2) self.document.rc.sp_chk.checked = 0;
+
+  if(new_cb != 3) self.document.rc.rpmin2_chk.checked = 0;
+  if(new_cb != 4) self.document.rc.rpmaj2_chk.checked = 0;
+
+  if(new_cb != 5) self.document.rc.rp_chk.checked = 0;
+  if(new_cb != 6) self.document.rc.r0_chk.checked = 0;
+  if(new_cb != 7) self.document.rc.r2_chk.checked = 0;
+
+  curchecks = 0;
+  if(self.document.rc.sb_chk.checked)  curchecks |= 0x2;
+  if(self.document.rc.sp_chk.checked)  curchecks |= 0x1;
+
+  if(self.document.rc.rpmin2_chk.checked)  curchecks |= 0x40;
+  if(self.document.rc.rpmaj2_chk.checked)  curchecks |= 0x80;
+
+  if(self.document.rc.rp_chk.checked)  curchecks |= 0x4;
+  if(self.document.rc.r0_chk.checked)  curchecks |= 0x8;
+  if(self.document.rc.r2_chk.checked)  curchecks |= 0x20;
+
+  parent.parent.PCSetsBody.update_dots();
+}
+
+function clear_selections() {
+  parent.parent.PCSetsBody.clear_dots();
+}
+
+</SCRIPT>
+</HEAD>
+
+<STYLE TYPE="text/css">
+<!--
+.hdf
+{
+font:10px arial,helvetica;
+}
+-->
+</STYLE>
+
+<BODY>
+
+<HR>
+<A HREF="javascript:clear_selections();"><SPAN class=hdf><CENTER>clear selections</CENTER></SPAN></A>
+<HR>
+<SPAN class=hdf>Display all PC Sets which are related to both <img src="bd1.gif"> and <img src="bd2.gif"> as follows:</SPAN>
+<FORM name=rc>
+<TABLE  border=1 CELLPADDING=2 CELLSPACING=0>
+<TR><TD><INPUT type=checkbox NAME=sb_chk onclick="javascript:changed_cb(1)"></TD><TD><SPAN CLASS=hdf>Common sub-sets</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=sp_chk onclick="javascript:changed_cb(2)"></TD><TD><SPAN CLASS=hdf>Common super-sets</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rpmin2_chk onclick="javascript:changed_cb(3)"></TD><TD><SPAN CLASS=hdf>One pitch a half-step moved</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rpmaj2_chk onclick="javascript:changed_cb(4)"></TD><TD><SPAN CLASS=hdf>One pitch a whole-step moved</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rp_chk onclick="javascript:changed_cb(5)"></TD><TD><SPAN CLASS=hdf>One pitch moved by any interval</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=r0_chk onclick="javascript:changed_cb(6)"></TD><TD><SPAN CLASS=hdf>0/6 interval vector components the same</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=r2_chk onclick="javascript:changed_cb(7)"></TD><TD><SPAN CLASS=hdf>4/6 interval vector components the same</SPAN></TD></TR>
+</TABLE>
+<SCRIPT>
+self.document.rc.sb_chk.checked = 1;
+curchecks = 0x2;
+</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>Algorithms for Computing the Prime Form</TITLE>
+</HEAD>
+<BODY>
+<A href="javascript:window.close()">Close this window</A>
+<H3>Two Algorithms for Computing the Prime Form</H3>
+<P>
+There are two algorithms for computing the prime form of a Pitch Class Set. The first was introduced by Allen Forte in <i>The Structure of Atonal Music</i> and the second is used by John Rahn in his book <i>Basic Atonal Theory</i> and is also used by Joseph N. Straus in his <i>Introduction to Post-Tonal Theory</i>.
+<P>
+The difference between the two algorithms is apparent when examining Pitch Class Set 6-31. The Prime Form using the Forte algorithm is (0,1,3,5,8,9), and the prime form using the Rahn algorithm is (0,1,4,5,7,9). As you can see, the Forte algorithm puts a priority on making the small numbers smaller (i.e. 3 instead of 4), whereas the Rahn algorithm wants the larger numbers to be smaller (i.e. 7 instead of 8).
+<P>
+Which is better? Well, it depends on who you ask. Computer programmers and computer music people will typically prefer the Rahn algorithm because it is computationally more elegant. However, the Forte algorithm has the more established pedigree, and so it tends to be preferred by academics.
+<P>
+Fortunately, this is usually a minor issue because it only affects the following 5 sets:
+<P>
+<CENTER>
+<TABLE border=1 CELLPADDING=3 CELLSPACING=2>
+<COLGROUP align="center">
+<COLGROUP align="center">
+<COLGROUP align="center">
+<TR><TD>Pitch Class Set</TD><TD>Forte Prime</TD><TD>Rahn Prime</TD></TR>
+<TR><TD>5-20</TD><TD>(0,1,3,7,8)</TD><TD>(0,1,5,6,8)</TD></TR>
+<TR><TD>6-Z29</TD><TD>(0,1,3,6,8,9)</TD><TD>(0,2,3,6,7,9)</TD></TR>
+<TR><TD>6-31</TD><TD>(0,1,3,5,8,9)</TD><TD>(0,1,4,5,7,9)</TD></TR>
+<TR><TD>7-20</TD><TD>(0,1,2,4,7,8,9)</TD><TD>(0,1,2,5,6,7,9)</TD></TR>
+<TR><TD>8-26</TD><TD>(0,1,2,4,5,7,9,10)</TD><TD>(0,1,3,4,5,7,8,10)</TD></TR>
+</TABLE>
+</CENTER>
+<P><HR>
+<A href="javascript:window.close()">Close this window</A>
+</BODY>
+</HTML>

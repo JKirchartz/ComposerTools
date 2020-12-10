@@ -1,0 +1,44 @@
+<HTML>
+<HEAD><TITLE>Twelve Tone Row - Matrix Calculator</TITLE>
+<SCRIPT>
+var valid_row = 0;
+var rd = new Array(12);
+var enteredpitches = new Array(12);
+var sharpflatpref = 0;
+var label_type = 0;
+
+var sharppitch = new Array(12)
+sharppitch[0] = 'C';
+sharppitch[1] = 'C#';
+sharppitch[2] = 'D';
+sharppitch[3] = 'D#';
+sharppitch[4] = 'E';
+sharppitch[5] = 'F';
+sharppitch[6] = 'F#';
+sharppitch[7] = 'G';
+sharppitch[8] = 'G#';
+sharppitch[9] = 'A';
+sharppitch[10] = 'A#';
+sharppitch[11] = 'B';
+
+var flatpitch = new Array(12)
+flatpitch[0] = 'C';
+flatpitch[1] = 'Db';
+flatpitch[2] = 'D';
+flatpitch[3] = 'Eb';
+flatpitch[4] = 'E';
+flatpitch[5] = 'F';
+flatpitch[6] = 'Gb';
+flatpitch[7] = 'G';
+flatpitch[8] = 'Ab';
+flatpitch[9] = 'A';
+flatpitch[10] = 'Bb';
+flatpitch[11] = 'B';
+
+</SCRIPT>
+</HEAD>
+<FRAMESET ROWS="220,*">
+<FRAME SRC="MatrixInput.html" NAME="InputFrame" MARGINHEIGHT=4 MARGINWIDTH=4>
+<FRAME SRC="MatrixDisplay.html" NAME="DisplayFrame" MARGINHEIGHT=4 MARGINWIDTH=4>
+</FRAMESET>
+</HTML>

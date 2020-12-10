@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE>Matrix Keyboard</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var sharppitch = new Array(12)
+sharppitch[0] = 'C';
+sharppitch[1] = 'C#';
+sharppitch[2] = 'D';
+sharppitch[3] = 'D#';
+sharppitch[4] = 'E';
+sharppitch[5] = 'F';
+sharppitch[6] = 'F#';
+sharppitch[7] = 'G';
+sharppitch[8] = 'G#';
+sharppitch[9] = 'A';
+sharppitch[10] = 'A#';
+sharppitch[11] = 'B';
+
+var flatpitch = new Array(12)
+flatpitch[0] = 'C';
+flatpitch[1] = 'Db';
+flatpitch[2] = 'D';
+flatpitch[3] = 'Eb';
+flatpitch[4] = 'E';
+flatpitch[5] = 'F';
+flatpitch[6] = 'Gb';
+flatpitch[7] = 'G';
+flatpitch[8] = 'Ab';
+flatpitch[9] = 'A';
+flatpitch[10] = 'Bb';
+flatpitch[11] = 'B';
+
+
+function startagain()
+{
+  opener.cleardata();
+}
+
+function keyboardKey(z)
+{
+  var SorF;
+
+  if(opener.etype == 0) {
+    eval("opener.document.InputForm.row" + opener.curfocus.toString(16).toUpperCase() + 
+         ".value='" + z.toString(16) + "'");
+  }
+  else {
+    if(SorFForm.acctype[0].checked)
+      SorF = document.SorFForm.acctype[0].value;
+    else
+      SorF = document.SorFForm.acctype[1].value;
+
+    if(SorF == 0)
+      pitch = sharppitch[z];
+    else
+      pitch = flatpitch[z];
+
+    eval("opener.document.InputForm.row" + opener.curfocus.toString(16).toUpperCase() + 
+         ".value='" + pitch + "'");
+  }
+  opener.curfocus = (opener.curfocus+1)%12;
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<center>
+<IMG ismap SRC="keyboard.gif" BORDER=0 ALIGN=top alt="keyboard"
+USEMAP="#keyboard">
+
+<map name="keyboard">
+<area shape=rect COORDS="  0,  1,  26, 56" HREF="javascript:keyboardKey(0)"  alt="C (0)">
+<area shape=rect COORDS="  0, 57,  37, 85" HREF="javascript:keyboardKey(0)"  alt="C (0)">
+<area shape=rect COORDS=" 28,  1,  47, 56" HREF="javascript:keyboardKey(1)"  alt="C#/Db (1)">
+<area shape=rect COORDS=" 48,  1,  66, 56" HREF="javascript:keyboardKey(2)"  alt="D (2)">
+<area shape=rect COORDS=" 40, 57,  76, 85" HREF="javascript:keyboardKey(2)"  alt="D (2)">
+<area shape=rect COORDS=" 67,  1,  88, 56" HREF="javascript:keyboardKey(3)"  alt="D#/Eb (3)">
+<area shape=rect COORDS=" 88,  1, 112, 56" HREF="javascript:keyboardKey(4)"  alt="E (4)">
+<area shape=rect COORDS=" 78, 57, 112, 85" HREF="javascript:keyboardKey(4)"  alt="E (4)">
+<area shape=rect COORDS="114,  1, 137, 56" HREF="javascript:keyboardKey(5)"  alt="F (5)">
+<area shape=rect COORDS="114, 57, 149, 85" HREF="javascript:keyboardKey(5)"  alt="F (5)">
+<area shape=rect COORDS="138,  1, 159, 56" HREF="javascript:keyboardKey(6)"  alt="F#/Gb (6)">
+<area shape=rect COORDS="160,  1, 178, 56" HREF="javascript:keyboardKey(7)"  alt="G (7)">
+<area shape=rect COORDS="151, 57, 188, 85" HREF="javascript:keyboardKey(7)"  alt="G (7)">
+<area shape=rect COORDS="179,  1, 198, 56" HREF="javascript:keyboardKey(8)"  alt="G#/Ab (8)">
+<area shape=rect COORDS="156,  1, 215, 56" HREF="javascript:keyboardKey(9)"  alt="A (9)">
+<area shape=rect COORDS="190, 57, 226, 85" HREF="javascript:keyboardKey(9)"  alt="A (9)">
+<area shape=rect COORDS="216,  1, 237, 56" HREF="javascript:keyboardKey(10)" alt="A#/Bb (10)">
+<area shape=rect COORDS="238,  1, 265, 56" HREF="javascript:keyboardKey(11)" alt="B (11)">
+<area shape=rect COORDS="228, 57, 265, 85" HREF="javascript:keyboardKey(11)" alt="B (11)">
+</map>
+<SCRIPT>
+  if(opener.etype) {
+    document.write("<FORM NAME=SorFForm>");
+    document.write("<TABLE border=0 cellspacing=0 cellpadding=0><TR>");
+    document.write("<TD><INPUT TYPE=radio NAME=acctype VALUE=0 CHECKED>enter sharps</TD>");
+    document.write("<TD width=30></TD>");
+    document.write("<TD><INPUT TYPE=radio NAME=acctype VALUE=1>enter flats</TD>");
+    document.write("</TR>");
+    document.write("</TABLE>");
+    document.write("</FORM>");
+  }
+  else {
+    document.write("<P>");
+  }
+</SCRIPT>
+<A href="javascript:startagain()">start over</A>
+</center>
+</BODY>
+</HTML>

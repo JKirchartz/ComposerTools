@@ -1,0 +1,748 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+
+var imgxref = new Array(352)
+imgxref[0]="i01";
+imgxref[1]="i11";
+imgxref[2]="i21";
+imgxref[3]="i22";
+imgxref[4]="i23";
+imgxref[5]="i24";
+imgxref[6]="i25";
+imgxref[7]="i26";
+imgxref[8]="i31";
+imgxref[9]="i32";
+imgxref[10]="i32b";
+imgxref[11]="i33";
+imgxref[12]="i33b";
+imgxref[13]="i34";
+imgxref[14]="i34b";
+imgxref[15]="i35";
+imgxref[16]="i35b";
+imgxref[17]="i36";
+imgxref[18]="i37";
+imgxref[19]="i37b";
+imgxref[20]="i38";
+imgxref[21]="i38b";
+imgxref[22]="i39";
+imgxref[23]="i310";
+imgxref[24]="i311";
+imgxref[25]="i311b";
+imgxref[26]="i312";
+imgxref[27]="i41";
+imgxref[28]="i42";
+imgxref[29]="i42b";
+imgxref[30]="i43";
+imgxref[31]="i44";
+imgxref[32]="i44b";
+imgxref[33]="i45";
+imgxref[34]="i45b";
+imgxref[35]="i46";
+imgxref[36]="i47";
+imgxref[37]="i48";
+imgxref[38]="i49";
+imgxref[39]="i410";
+imgxref[40]="i411";
+imgxref[41]="i411b";
+imgxref[42]="i412";
+imgxref[43]="i412b";
+imgxref[44]="i413";
+imgxref[45]="i413b";
+imgxref[46]="i414";
+imgxref[47]="i414b";
+imgxref[48]="i4Z15";
+imgxref[49]="i4Z15b";
+imgxref[50]="i4Z29";
+imgxref[51]="i4Z29b";
+imgxref[52]="i416";
+imgxref[53]="i416b";
+imgxref[54]="i417";
+imgxref[55]="i418";
+imgxref[56]="i418b";
+imgxref[57]="i419";
+imgxref[58]="i419b";
+imgxref[59]="i420";
+imgxref[60]="i421";
+imgxref[61]="i422";
+imgxref[62]="i422b";
+imgxref[63]="i423";
+imgxref[64]="i424";
+imgxref[65]="i425";
+imgxref[66]="i426";
+imgxref[67]="i427";
+imgxref[68]="i427b";
+imgxref[69]="i428";
+imgxref[70]="i51";
+imgxref[71]="i52";
+imgxref[72]="i52b";
+imgxref[73]="i53";
+imgxref[74]="i53b";
+imgxref[75]="i54";
+imgxref[76]="i54b";
+imgxref[77]="i55";
+imgxref[78]="i55b";
+imgxref[79]="i56";
+imgxref[80]="i56b";
+imgxref[81]="i57";
+imgxref[82]="i57b";
+imgxref[83]="i58";
+imgxref[84]="i59";
+imgxref[85]="i59b";
+imgxref[86]="i510";
+imgxref[87]="i510b";
+imgxref[88]="i511";
+imgxref[89]="i511b";
+imgxref[90]="i5Z12";
+imgxref[91]="i5Z36";
+imgxref[92]="i5Z36b";
+imgxref[93]="i513";
+imgxref[94]="i513b";
+imgxref[95]="i514";
+imgxref[96]="i514b";
+imgxref[97]="i515";
+imgxref[98]="i516";
+imgxref[99]="i516b";
+imgxref[100]="i5Z17";
+imgxref[101]="i5Z37";
+imgxref[102]="i5Z18";
+imgxref[103]="i5Z18b";
+imgxref[104]="i5Z38";
+imgxref[105]="i5Z38b";
+imgxref[106]="i519";
+imgxref[107]="i519b";
+imgxref[108]="i520";
+imgxref[109]="i520b";
+imgxref[110]="i521";
+imgxref[111]="i521b";
+imgxref[112]="i522";
+imgxref[113]="i523";
+imgxref[114]="i523b";
+imgxref[115]="i524";
+imgxref[116]="i524b";
+imgxref[117]="i525";
+imgxref[118]="i525b";
+imgxref[119]="i526";
+imgxref[120]="i526b";
+imgxref[121]="i527";
+imgxref[122]="i527b";
+imgxref[123]="i528";
+imgxref[124]="i528b";
+imgxref[125]="i529";
+imgxref[126]="i529b";
+imgxref[127]="i530";
+imgxref[128]="i530b";
+imgxref[129]="i531";
+imgxref[130]="i531b";
+imgxref[131]="i532";
+imgxref[132]="i532b";
+imgxref[133]="i533";
+imgxref[134]="i534";
+imgxref[135]="i535";
+imgxref[136]="i61";
+imgxref[137]="i62";
+imgxref[138]="i62b";
+imgxref[139]="i6Z3";
+imgxref[140]="i6Z3b";
+imgxref[141]="i6Z36";
+imgxref[142]="i6Z36b";
+imgxref[143]="i6Z4";
+imgxref[144]="i6Z37";
+imgxref[145]="i65";
+imgxref[146]="i65b";
+imgxref[147]="i6Z6";
+imgxref[148]="i6Z38";
+imgxref[149]="i67";
+imgxref[150]="i68";
+imgxref[151]="i69";
+imgxref[152]="i69b";
+imgxref[153]="i6Z10";
+imgxref[154]="i6Z10b";
+imgxref[155]="i6Z39";
+imgxref[156]="i6Z39b";
+imgxref[157]="i6Z11";
+imgxref[158]="i6Z11b";
+imgxref[159]="i6Z40";
+imgxref[160]="i6Z40b";
+imgxref[161]="i6Z12";
+imgxref[162]="i6Z12b";
+imgxref[163]="i6Z41";
+imgxref[164]="i6Z41b";
+imgxref[165]="i6Z13";
+imgxref[166]="i6Z42";
+imgxref[167]="i614";
+imgxref[168]="i614b";
+imgxref[169]="i615";
+imgxref[170]="i615b";
+imgxref[171]="i616";
+imgxref[172]="i616b";
+imgxref[173]="i6Z17";
+imgxref[174]="i6Z17b";
+imgxref[175]="i6Z43";
+imgxref[176]="i6Z43b";
+imgxref[177]="i618";
+imgxref[178]="i618b";
+imgxref[179]="i6Z19";
+imgxref[180]="i6Z19b";
+imgxref[181]="i6Z44";
+imgxref[182]="i6Z44b";
+imgxref[183]="i620";
+imgxref[184]="i621";
+imgxref[185]="i621b";
+imgxref[186]="i622";
+imgxref[187]="i622b";
+imgxref[188]="i6Z23";
+imgxref[189]="i6Z45";
+imgxref[190]="i6Z24";
+imgxref[191]="i6Z24b";
+imgxref[192]="i6Z46";
+imgxref[193]="i6Z46b";
+imgxref[194]="i6Z25";
+imgxref[195]="i6Z25b";
+imgxref[196]="i6Z47";
+imgxref[197]="i6Z47b";
+imgxref[198]="i6Z26";
+imgxref[199]="i6Z48";
+imgxref[200]="i627";
+imgxref[201]="i627b";
+imgxref[202]="i6Z28";
+imgxref[203]="i6Z49";
+imgxref[204]="i6Z29";
+imgxref[205]="i6Z50";
+imgxref[206]="i630";
+imgxref[207]="i630b";
+imgxref[208]="i631";
+imgxref[209]="i631b";
+imgxref[210]="i632";
+imgxref[211]="i633";
+imgxref[212]="i633b";
+imgxref[213]="i634";
+imgxref[214]="i634b";
+imgxref[215]="i635";
+imgxref[216]="i71";
+imgxref[217]="i72";
+imgxref[218]="i72b";
+imgxref[219]="i73";
+imgxref[220]="i73b";
+imgxref[221]="i74";
+imgxref[222]="i74b";
+imgxref[223]="i75";
+imgxref[224]="i75b";
+imgxref[225]="i76";
+imgxref[226]="i76b";
+imgxref[227]="i77";
+imgxref[228]="i77b";
+imgxref[229]="i78";
+imgxref[230]="i79";
+imgxref[231]="i79b";
+imgxref[232]="i710";
+imgxref[233]="i710b";
+imgxref[234]="i711";
+imgxref[235]="i711b";
+imgxref[236]="i7Z12";
+imgxref[237]="i7Z36";
+imgxref[238]="i7Z36b";
+imgxref[239]="i713";
+imgxref[240]="i713b";
+imgxref[241]="i714";
+imgxref[242]="i714b";
+imgxref[243]="i715";
+imgxref[244]="i716";
+imgxref[245]="i716b";
+imgxref[246]="i7Z17";
+imgxref[247]="i7Z37";
+imgxref[248]="i7Z18";
+imgxref[249]="i7Z18b";
+imgxref[250]="i7Z38";
+imgxref[251]="i7Z38b";
+imgxref[252]="i719";
+imgxref[253]="i719b";
+imgxref[254]="i720";
+imgxref[255]="i720b";
+imgxref[256]="i721";
+imgxref[257]="i721b";
+imgxref[258]="i722";
+imgxref[259]="i723";
+imgxref[260]="i723b";
+imgxref[261]="i724";
+imgxref[262]="i724b";
+imgxref[263]="i725";
+imgxref[264]="i725b";
+imgxref[265]="i726";
+imgxref[266]="i726b";
+imgxref[267]="i727";
+imgxref[268]="i727b";
+imgxref[269]="i728";
+imgxref[270]="i728b";
+imgxref[271]="i729";
+imgxref[272]="i729b";
+imgxref[273]="i730";
+imgxref[274]="i730b";
+imgxref[275]="i731";
+imgxref[276]="i731b";
+imgxref[277]="i732";
+imgxref[278]="i732b";
+imgxref[279]="i733";
+imgxref[280]="i734";
+imgxref[281]="i735";
+imgxref[282]="i81";
+imgxref[283]="i82";
+imgxref[284]="i82b";
+imgxref[285]="i83";
+imgxref[286]="i84";
+imgxref[287]="i84b";
+imgxref[288]="i85";
+imgxref[289]="i85b";
+imgxref[290]="i86";
+imgxref[291]="i87";
+imgxref[292]="i88";
+imgxref[293]="i89";
+imgxref[294]="i810";
+imgxref[295]="i811";
+imgxref[296]="i811b";
+imgxref[297]="i812";
+imgxref[298]="i812b";
+imgxref[299]="i813";
+imgxref[300]="i813b";
+imgxref[301]="i814";
+imgxref[302]="i814b";
+imgxref[303]="i8Z15";
+imgxref[304]="i8Z15b";
+imgxref[305]="i8Z29";
+imgxref[306]="i8Z29b";
+imgxref[307]="i816";
+imgxref[308]="i816b";
+imgxref[309]="i817";
+imgxref[310]="i818";
+imgxref[311]="i818b";
+imgxref[312]="i819";
+imgxref[313]="i819b";
+imgxref[314]="i820";
+imgxref[315]="i821";
+imgxref[316]="i822";
+imgxref[317]="i822b";
+imgxref[318]="i823";
+imgxref[319]="i824";
+imgxref[320]="i825";
+imgxref[321]="i826";
+imgxref[322]="i827";
+imgxref[323]="i827b";
+imgxref[324]="i828";
+imgxref[325]="i91";
+imgxref[326]="i92";
+imgxref[327]="i92b";
+imgxref[328]="i93";
+imgxref[329]="i93b";
+imgxref[330]="i94";
+imgxref[331]="i94b";
+imgxref[332]="i95";
+imgxref[333]="i95b";
+imgxref[334]="i96";
+imgxref[335]="i97";
+imgxref[336]="i97b";
+imgxref[337]="i98";
+imgxref[338]="i98b";
+imgxref[339]="i99";
+imgxref[340]="i910";
+imgxref[341]="i911";
+imgxref[342]="i911b";
+imgxref[343]="i912";
+imgxref[344]="iA1";
+imgxref[345]="iA2";
+imgxref[346]="iA3";
+imgxref[347]="iA4";
+imgxref[348]="iA5";
+imgxref[349]="iA6";
+imgxref[350]="iB1";
+imgxref[351]="iC1";
+
+var cursetname = "x";
+
+function update_dots() {
+  var i=0;
+  var curchecks = parent.SelectFrame.PCRelations.curchecks;
+
+  if(cursetname != "x") {
+    for(i = 0 ; i < 352 ; i++) {
+      if(imgxref[i] == cursetname) {
+        document[imgxref[i]].src = "bd.gif";
+      } 
+      else {
+        if( (parent.SelectFrame.PCSCurrent.relarray[i] & curchecks) !=  0)
+          document[imgxref[i]].src = "rd.gif";
+        else
+          document[imgxref[i]].src = "nd.gif";
+      }
+    }
+  }
+}
+
+function newset(setname) {
+  cursetname = setname;
+  document[setname].src = "bd.gif";
+  parent.SelectFrame.PCSCurrent.location.href = "rtables/" + setname + ".html";
+  window.status = "rtables/" + setname + ".html";
+}
+
+
+function clear_dots() {
+  var i=0;
+  cursetname = "x";
+  
+  for(i = 0 ; i < 352 ; i++) {
+    document[imgxref[i]].src = "nd.gif";
+  }
+
+  parent.SelectFrame.PCSCurrent.location.href = "Select.html";
+}
+
+
+</SCRIPT>
+</HEAD>
+
+<STYLE TYPE="text/css">
+<!--
+.tbf
+{
+font:10px arial,helvetica;
+}
+-->
+<STYLE TYPE="text/css">
+<!--
+.tbh
+{
+font:12px arial,helvetica;
+}
+-->
+</STYLE>
+<STYLE TYPE="text/css">
+<!--
+.tbc
+{
+font:10px arial,helvetica;
+}
+-->
+</STYLE>
+<BODY>
+<SPAN style="font:12px arial,helvetica;font-weight:bold;"><A HREF="http://www.composertools.com/" TARGET="_top">ComposerTools.com</A> / 
+<A HREF="../index.html" TARGET="_top">Tools</A> / Pitch Class Set Relationship Calculator - </SPAN>
+<SPAN style="font:10px arial,helvetica;">Copyright (c) 2003,2004 by Paul Nelson, all rights reserved.</SPAN>
+<HR>
+
+
+<TABLE border=0 width="700">
+<COLGROUP width=350>
+<COLGROUP width=350>
+
+<TR><TD>
+<TABLE border=0 CELLPADDING=0 CELLSPACING=0>
+<COLGROUP align="left">
+<COLGROUP align="center">
+<COLGROUP align="center">
+<COLGROUP align="left">
+<COLGROUP align="left">
+<TR><TD><SPAN CLASS=tbf>interval</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>Forte</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">prime</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">inverted</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>vector</SPAN></TD><TD><SPAN CLASS=tbf>count</SPAN></TD><TD><SPAN CLASS=tbf> code </SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>0 pitches, 0 intvls   (1 vector, 1 quality, 1 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(1)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i01');"><img name="i01" align=middle border=0 alt="i01" src="nd.gif">() {silence}</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>1 pitch, 0 intvls  (1 vector, 1 quality, 12 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i11');"><img name="i11" align=middle border=0 alt="i11" src="nd.gif">(0) {single-note}</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>2 pitches, 1 intvls   (6 vectors, 6 qualities, 66 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;100000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i21');"><img name="i21" align=middle border=0 alt="i21" src="nd.gif">(0,1) {half-step}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;010000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i22');"><img name="i22" align=middle border=0 alt="i22" src="nd.gif">(0,2) {whole-step}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;001000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i23');"><img name="i23" align=middle border=0 alt="i23" src="nd.gif">(0,3) {minor-third}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i24');"><img name="i24" align=middle border=0 alt="i24" src="nd.gif">(0,4) {major-third}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000010&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i25');"><img name="i25" align=middle border=0 alt="i25" src="nd.gif">(0,5) {perfect}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000001&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i26');"><img name="i26" align=middle border=0 alt="i26" src="nd.gif">(0,6) {tritone}</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>3 pitches, 3 intvls  (12 vectors, 19 qualities, 220 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;210000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>3-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i31');"><img name="i31" align=middle border=0 alt="i31" src="nd.gif">(0,1,2)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;111000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i32');"><img name="i32" align=middle border=0 alt="i32" src="nd.gif">(0,1,3)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i32b');"><img name="i32b" align=middle border=0 alt="i32b" src="nd.gif">[0,2,3]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;101100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i33');"><img name="i33" align=middle border=0 alt="i33" src="nd.gif">(0,1,4)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i33b');"><img name="i33b" align=middle border=0 alt="i33b" src="nd.gif">[0,3,4]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;100110&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i34');"><img name="i34" align=middle border=0 alt="i34" src="nd.gif">(0,1,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i34b');"><img name="i34b" align=middle border=0 alt="i34b" src="nd.gif">[0,4,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;100011&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i35');"><img name="i35" align=middle border=0 alt="i35" src="nd.gif">(0,1,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i35b');"><img name="i35b" align=middle border=0 alt="i35b" src="nd.gif">[0,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;020100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>3-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i36');"><img name="i36" align=middle border=0 alt="i36" src="nd.gif">(0,2,4)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;011010&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i37');"><img name="i37" align=middle border=0 alt="i37" src="nd.gif">(0,2,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i37b');"><img name="i37b" align=middle border=0 alt="i37b" src="nd.gif">[0,3,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;010101&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i38');"><img name="i38" align=middle border=0 alt="i38" src="nd.gif">(0,2,6) {It.}</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i38b');"><img name="i38b" align=middle border=0 alt="i38b" src="nd.gif">[0,4,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;010020&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>3-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i39');"><img name="i39" align=middle border=0 alt="i39" src="nd.gif">(0,2,7) {quar-3}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;002001&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>3-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i310');"><img name="i310" align=middle border=0 alt="i310" src="nd.gif">(0,3,6) {dim}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;001110&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>3-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i311');"><img name="i311" align=middle border=0 alt="i311" src="nd.gif">(0,3,7) {min}</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i311b');"><img name="i311b" align=middle border=0 alt="i311b" src="nd.gif">[0,4,7]{maj}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;000300&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(4)</SPAN></TD><TD><SPAN CLASS=tbf>3-12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i312');"><img name="i312" align=middle border=0 alt="i312" src="nd.gif">(0,4,8) {aug}</A></SPAN></TD><TD></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>4 pitches, 6 intvls  (28 vectors, 43 qualities, 495 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;321000&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i41');"><img name="i41" align=middle border=0 alt="i41" src="nd.gif">(0,1,2,3)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;221100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i42');"><img name="i42" align=middle border=0 alt="i42" src="nd.gif">(0,1,2,4)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i42b');"><img name="i42b" align=middle border=0 alt="i42b" src="nd.gif">[0,2,3,4]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;212100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i43');"><img name="i43" align=middle border=0 alt="i43" src="nd.gif">(0,1,3,4)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;211110&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i44');"><img name="i44" align=middle border=0 alt="i44" src="nd.gif">(0,1,2,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i44b');"><img name="i44b" align=middle border=0 alt="i44b" src="nd.gif">[0,3,4,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;210111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i45');"><img name="i45" align=middle border=0 alt="i45" src="nd.gif">(0,1,2,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i45b');"><img name="i45b" align=middle border=0 alt="i45b" src="nd.gif">[0,4,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;210021&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i46');"><img name="i46" align=middle border=0 alt="i46" src="nd.gif">(0,1,2,7)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;201210&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i47');"><img name="i47" align=middle border=0 alt="i47" src="nd.gif">(0,1,4,5)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;200121&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i48');"><img name="i48" align=middle border=0 alt="i48" src="nd.gif">(0,1,5,6)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;200022&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD><SPAN CLASS=tbf>4-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i49');"><img name="i49" align=middle border=0 alt="i49" src="nd.gif">(0,1,6,7)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;122010&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i410');"><img name="i410" align=middle border=0 alt="i410" src="nd.gif">(0,2,3,5)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;121110&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i411');"><img name="i411" align=middle border=0 alt="i411" src="nd.gif">(0,1,3,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i411b');"><img name="i411b" align=middle border=0 alt="i411b" src="nd.gif">[0,2,4,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;112101&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i412');"><img name="i412" align=middle border=0 alt="i412" src="nd.gif">(0,2,3,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i412b');"><img name="i412b" align=middle border=0 alt="i412b" src="nd.gif">[0,3,4,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;112011&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-13:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i413');"><img name="i413" align=middle border=0 alt="i413" src="nd.gif">(0,1,3,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i413b');"><img name="i413b" align=middle border=0 alt="i413b" src="nd.gif">[0,3,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;111120&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-14:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i414');"><img name="i414" align=middle border=0 alt="i414" src="nd.gif">(0,2,3,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i414b');"><img name="i414b" align=middle border=0 alt="i414b" src="nd.gif">[0,4,5,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;111111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>4-Z15:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i4Z15');"><img name="i4Z15" align=middle border=0 alt="i4Z15" src="nd.gif">(0,1,4,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i4Z15b');"><img name="i4Z15b" align=middle border=0 alt="i4Z15b" src="nd.gif">[0,2,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>4-Z29:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i4Z29');"><img name="i4Z29" align=middle border=0 alt="i4Z29" src="nd.gif">(0,1,3,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i4Z29b');"><img name="i4Z29b" align=middle border=0 alt="i4Z29b" src="nd.gif">[0,4,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;110121&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-16:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i416');"><img name="i416" align=middle border=0 alt="i416" src="nd.gif">(0,1,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i416b');"><img name="i416b" align=middle border=0 alt="i416b" src="nd.gif">[0,2,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;102210&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-17:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i417');"><img name="i417" align=middle border=0 alt="i417" src="nd.gif">(0,3,4,7)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;102111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-18:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i418');"><img name="i418" align=middle border=0 alt="i418" src="nd.gif">(0,1,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i418b');"><img name="i418b" align=middle border=0 alt="i418b" src="nd.gif">[0,3,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;101310&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-19:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i419');"><img name="i419" align=middle border=0 alt="i419" src="nd.gif">(0,1,4,8) {mM7}</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i419b');"><img name="i419b" align=middle border=0 alt="i419b" src="nd.gif">[0,3,4,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;101220&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-20:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i420');"><img name="i420" align=middle border=0 alt="i420" src="nd.gif">(0,1,5,8) {maj7}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;030201&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-21:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i421');"><img name="i421" align=middle border=0 alt="i421" src="nd.gif">(0,2,4,6)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;021120&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-22:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i422');"><img name="i422" align=middle border=0 alt="i422" src="nd.gif">(0,2,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i422b');"><img name="i422b" align=middle border=0 alt="i422b" src="nd.gif">[0,3,5,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;021030&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-23:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i423');"><img name="i423" align=middle border=0 alt="i423" src="nd.gif">(0,2,5,7) {quar-4}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;020301&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-24:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i424');"><img name="i424" align=middle border=0 alt="i424" src="nd.gif">(0,2,4,8) {7+5}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;020202&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD><SPAN CLASS=tbf>4-25:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i425');"><img name="i425" align=middle border=0 alt="i425" src="nd.gif">(0,2,6,8) {fr.,7-5}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;012120&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>4-26:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i426');"><img name="i426" align=middle border=0 alt="i426" src="nd.gif">(0,3,5,8) {min7,maj6}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;012111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>4-27:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i427');"><img name="i427" align=middle border=0 alt="i427" src="nd.gif">(0,2,5,8) {hd7}</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i427b');"><img name="i427b" align=middle border=0 alt="i427b" src="nd.gif">[0,3,6,8]{dom7}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;004002&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(3)</SPAN></TD><TD><SPAN CLASS=tbf>4-28:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i428');"><img name="i428" align=middle border=0 alt="i428" src="nd.gif">(0,3,6,9) {dd7}</A></SPAN></TD><TD></TD></TR>
+
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>5 pitches, 10 intvls (35 vectors, 66 qualities, 792 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;432100&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i51');"><img name="i51" align=middle border=0 alt="i51" src="nd.gif">(0,1,2,3,4)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;332110&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i52');"><img name="i52" align=middle border=0 alt="i52" src="nd.gif">(0,1,2,3,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i52b');"><img name="i52b" align=middle border=0 alt="i52b" src="nd.gif">[0,2,3,4,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;322210&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i53');"><img name="i53" align=middle border=0 alt="i53" src="nd.gif">(0,1,2,4,5)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i53b');"><img name="i53b" align=middle border=0 alt="i53b" src="nd.gif">[0,1,3,4,5]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;322111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i54');"><img name="i54" align=middle border=0 alt="i54" src="nd.gif">(0,1,2,3,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i54b');"><img name="i54b" align=middle border=0 alt="i54b" src="nd.gif">[0,3,4,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;321121&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i55');"><img name="i55" align=middle border=0 alt="i55" src="nd.gif">(0,1,2,3,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i55b');"><img name="i55b" align=middle border=0 alt="i55b" src="nd.gif">[0,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;311221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i56');"><img name="i56" align=middle border=0 alt="i56" src="nd.gif">(0,1,2,5,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i56b');"><img name="i56b" align=middle border=0 alt="i56b" src="nd.gif">[0,1,4,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;310132&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i57');"><img name="i57" align=middle border=0 alt="i57" src="nd.gif">(0,1,2,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i57b');"><img name="i57b" align=middle border=0 alt="i57b" src="nd.gif">[0,1,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;232201&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i58');"><img name="i58" align=middle border=0 alt="i58" src="nd.gif">(0,2,3,4,6)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;231211&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i59');"><img name="i59" align=middle border=0 alt="i59" src="nd.gif">(0,1,2,4,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i59b');"><img name="i59b" align=middle border=0 alt="i59b" src="nd.gif">[0,2,4,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;223111&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i510');"><img name="i510" align=middle border=0 alt="i510" src="nd.gif">(0,1,3,4,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i510b');"><img name="i510b" align=middle border=0 alt="i510b" src="nd.gif">[0,2,3,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;222220&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i511');"><img name="i511" align=middle border=0 alt="i511" src="nd.gif">(0,2,3,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i511b');"><img name="i511b" align=middle border=0 alt="i511b" src="nd.gif">[0,3,4,5,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;222121&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(36)</SPAN></TD><TD><SPAN CLASS=tbf>5-Z12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z12');"><img name="i5Z12" align=middle border=0 alt="i5Z12" src="nd.gif">(0,1,3,5,6)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>5-Z36:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z36');"><img name="i5Z36" align=middle border=0 alt="i5Z36" src="nd.gif">(0,1,2,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z36b');"><img name="i5Z36b" align=middle border=0 alt="i5Z36b" src="nd.gif">[0,3,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;221311&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-13:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i513');"><img name="i513" align=middle border=0 alt="i513" src="nd.gif">(0,1,2,4,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i513b');"><img name="i513b" align=middle border=0 alt="i513b" src="nd.gif">[0,2,3,4,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;221131&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-14:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i514');"><img name="i514" align=middle border=0 alt="i514" src="nd.gif">(0,1,2,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i514b');"><img name="i514b" align=middle border=0 alt="i514b" src="nd.gif">[0,2,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;220222&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-15:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i515');"><img name="i515" align=middle border=0 alt="i515" src="nd.gif">(0,1,2,6,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;213211&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-16:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i516');"><img name="i516" align=middle border=0 alt="i516" src="nd.gif">(0,1,3,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i516b');"><img name="i516b" align=middle border=0 alt="i516b" src="nd.gif">[0,3,4,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;212320&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-Z17:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z17');"><img name="i5Z17" align=middle border=0 alt="i5Z17" src="nd.gif">(0,1,3,4,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>5-Z37:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z37');"><img name="i5Z37" align=middle border=0 alt="i5Z37" src="nd.gif">(0,3,4,5,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;212221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>5-Z18:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z18');"><img name="i5Z18" align=middle border=0 alt="i5Z18" src="nd.gif">(0,1,4,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z18b');"><img name="i5Z18b" align=middle border=0 alt="i5Z18b" src="nd.gif">[0,2,3,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>5-Z38:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z38');"><img name="i5Z38" align=middle border=0 alt="i5Z38" src="nd.gif">(0,1,2,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i5Z38b');"><img name="i5Z38b" align=middle border=0 alt="i5Z38b" src="nd.gif">[0,3,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;212122&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-19:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i519');"><img name="i519" align=middle border=0 alt="i519" src="nd.gif">(0,1,3,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i519b');"><img name="i519b" align=middle border=0 alt="i519b" src="nd.gif">[0,1,4,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;211231&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-20:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i520');"><img name="i520" align=middle border=0 alt="i520" src="nd.gif">(0,1,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i520b');"><img name="i520b" align=middle border=0 alt="i520b" src="nd.gif">[0,2,3,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;202420&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-21:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i521');"><img name="i521" align=middle border=0 alt="i521" src="nd.gif">(0,1,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i521b');"><img name="i521b" align=middle border=0 alt="i521b" src="nd.gif">[0,3,4,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;202321&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-22:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i522');"><img name="i522" align=middle border=0 alt="i522" src="nd.gif">(0,1,4,7,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;132130&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-23:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i523');"><img name="i523" align=middle border=0 alt="i523" src="nd.gif">(0,2,3,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i523b');"><img name="i523b" align=middle border=0 alt="i523b" src="nd.gif">[0,2,4,5,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;131221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-24:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i524');"><img name="i524" align=middle border=0 alt="i524" src="nd.gif">(0,1,3,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i524b');"><img name="i524b" align=middle border=0 alt="i524b" src="nd.gif">[0,2,4,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;123121&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-25:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i525');"><img name="i525" align=middle border=0 alt="i525" src="nd.gif">(0,2,3,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i525b');"><img name="i525b" align=middle border=0 alt="i525b" src="nd.gif">[0,3,5,6,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;122311&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-26:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i526');"><img name="i526" align=middle border=0 alt="i526" src="nd.gif">(0,2,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i526b');"><img name="i526b" align=middle border=0 alt="i526b" src="nd.gif">[0,3,4,6,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;122230&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-27:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i527');"><img name="i527" align=middle border=0 alt="i527" src="nd.gif">(0,1,3,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i527b');"><img name="i527b" align=middle border=0 alt="i527b" src="nd.gif">[0,3,5,7,8]{min9}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;122212&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-28:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i528');"><img name="i528" align=middle border=0 alt="i528" src="nd.gif">(0,2,3,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i528b');"><img name="i528b" align=middle border=0 alt="i528b" src="nd.gif">[0,2,5,6,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;122131&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-29:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i529');"><img name="i529" align=middle border=0 alt="i529" src="nd.gif">(0,1,3,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i529b');"><img name="i529b" align=middle border=0 alt="i529b" src="nd.gif">[0,2,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;121321&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-30:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i530');"><img name="i530" align=middle border=0 alt="i530" src="nd.gif">(0,1,4,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i530b');"><img name="i530b" align=middle border=0 alt="i530b" src="nd.gif">[0,2,4,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;114112&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-31:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i531');"><img name="i531" align=middle border=0 alt="i531" src="nd.gif">(0,1,3,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i531b');"><img name="i531b" align=middle border=0 alt="i531b" src="nd.gif">[0,2,3,6,9]{7-9}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;113221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>5-32:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i532');"><img name="i532" align=middle border=0 alt="i532" src="nd.gif">(0,1,4,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i532b');"><img name="i532b" align=middle border=0 alt="i532b" src="nd.gif">[0,2,5,6,9]{7+9}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;040402&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-33:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i533');"><img name="i533" align=middle border=0 alt="i533" src="nd.gif">(0,2,4,6,8) {9+5,9-5}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;032221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-34:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i534');"><img name="i534" align=middle border=0 alt="i534" src="nd.gif">(0,2,4,6,9) {dom9}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;032140&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>5-35:</SPAN></TD><TD colspan=2><SPAN CLASS=tbf><A HREF="javascript:newset('i535');"><img name="i535" align=middle border=0 alt="i535" src="nd.gif">(0,2,4,7,9) {pentatonic,Quar-5}</A></SPAN></TD></TR>
+</TABLE>
+</TD>
+
+<TD>
+<TABLE border=0 CELLPADDING=0 CELLSPACING=0>
+<COLGROUP align="left">
+<COLGROUP align="center">
+<COLGROUP align="center">
+<COLGROUP align="left">
+<COLGROUP align="left">
+<TR><TD><SPAN CLASS=tbf>interval</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>Forte</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">prime</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">inverted</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>vector</SPAN></TD><TD><SPAN CLASS=tbf>count</SPAN></TD><TD><SPAN CLASS=tbf> code </SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>12 pitches, 66 intvls   (1 vector, 1 quality, 1 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;CCCCC6&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(1)</SPAN></TD><TD></TD><TD colspan=2><SPAN CLASS=tbf><A HREF="javascript:newset('iC1');"><img name="iC1" align=middle border=0 alt="iC1" src="nd.gif">(0,1,2,3,4,5,6,7,8,9,A,B) {chromatic}</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>11 pitches, 55 intvls   (1 vector, 1 quality, 12 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;AAAAA5&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iB1');"><img name="iB1" align=middle border=0 alt="iB1" src="nd.gif">(0,1,2,3,4,5,6,7,8,9,A)</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>10 pitches, 45 intvls   (6 vectors, 6 qualities, 66 total)</TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;988884&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA1');"><img name="iA1" align=middle border=0 alt="iA1" src="nd.gif">(0,1,2,3,4,5,6,7,8,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;898884&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA2');"><img name="iA2" align=middle border=0 alt="iA2" src="nd.gif">(0,1,2,3,4,5,6,7,8,A)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;889884&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA3');"><img name="iA3" align=middle border=0 alt="iA3" src="nd.gif">(0,1,2,3,4,5,6,7,9,A)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;888984&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA4');"><img name="iA4" align=middle border=0 alt="iA4" src="nd.gif">(0,1,2,3,4,5,6,8,9,A)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;888894&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA5');"><img name="iA5" align=middle border=0 alt="iA5" src="nd.gif">(0,1,2,3,4,5,7,8,9,A)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;888885&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('iA6');"><img name="iA6" align=middle border=0 alt="iA6" src="nd.gif">(0,1,2,3,4,6,7,8,9,A)</A></SPAN></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>9 pitches, 36 intvls  (12 vectors, 19 qualities, 220 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;876663&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>9-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i91');"><img name="i91" align=middle border=0 alt="i91" src="nd.gif">(0,1,2,3,4,5,6,7,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;777663&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i92');"><img name="i92" align=middle border=0 alt="i92" src="nd.gif">(0,1,2,3,4,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i92b');"><img name="i92b" align=middle border=0 alt="i92b" src="nd.gif">[0,2,3,4,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;767763&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i93');"><img name="i93" align=middle border=0 alt="i93" src="nd.gif">(0,1,2,3,4,5,6,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i93b');"><img name="i93b" align=middle border=0 alt="i93b" src="nd.gif">[0,1,3,4,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;766773&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i94');"><img name="i94" align=middle border=0 alt="i94" src="nd.gif">(0,1,2,3,4,5,7,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i94b');"><img name="i94b" align=middle border=0 alt="i94b" src="nd.gif">[0,1,2,4,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;766674&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i95');"><img name="i95" align=middle border=0 alt="i95" src="nd.gif">(0,1,2,3,4,6,7,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i95b');"><img name="i95b" align=middle border=0 alt="i95b" src="nd.gif">[0,1,2,3,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;686763&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>9-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i96');"><img name="i96" align=middle border=0 alt="i96" src="nd.gif">(0,1,2,3,4,5,6,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;677673&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i97');"><img name="i97" align=middle border=0 alt="i97" src="nd.gif">(0,1,2,3,4,5,7,8,A)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i97b');"><img name="i97b" align=middle border=0 alt="i97b" src="nd.gif">[0,1,3,4,5,6,7,8,A]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;676764&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i98');"><img name="i98" align=middle border=0 alt="i98" src="nd.gif">(0,1,2,3,4,6,7,8,A)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i98b');"><img name="i98b" align=middle border=0 alt="i98b" src="nd.gif">[0,1,2,4,5,6,7,8,A]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;676683&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>9-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i99');"><img name="i99" align=middle border=0 alt="i99" src="nd.gif">(0,1,2,3,5,6,7,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;668664&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>9-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i910');"><img name="i910" align=middle border=0 alt="i910" src="nd.gif">(0,1,2,3,4,6,7,9,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;667773&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>9-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i911');"><img name="i911" align=middle border=0 alt="i911" src="nd.gif">(0,1,2,3,5,6,7,9,A)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i911b');"><img name="i911b" align=middle border=0 alt="i911b" src="nd.gif">[0,1,2,4,5,6,7,9,A]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;666963&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(4)</SPAN></TD><TD><SPAN CLASS=tbf>9-12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i912');"><img name="i912" align=middle border=0 alt="i912" src="nd.gif">(0,1,2,4,5,6,8,9,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>8 pitches, 28 intvls  (28 vectors, 43 qualities, 495 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;765442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i81');"><img name="i81" align=middle border=0 alt="i81" src="nd.gif">(0,1,2,3,4,5,6,7)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;665542&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i82');"><img name="i82" align=middle border=0 alt="i82" src="nd.gif">(0,1,2,3,4,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i82b');"><img name="i82b" align=middle border=0 alt="i82b" src="nd.gif">[0,2,3,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;656542&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i83');"><img name="i83" align=middle border=0 alt="i83" src="nd.gif">(0,1,2,3,4,5,6,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;655552&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i84');"><img name="i84" align=middle border=0 alt="i84" src="nd.gif">(0,1,2,3,4,5,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i84b');"><img name="i84b" align=middle border=0 alt="i84b" src="nd.gif">[0,1,3,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;654553&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i85');"><img name="i85" align=middle border=0 alt="i85" src="nd.gif">(0,1,2,3,4,6,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i85b');"><img name="i85b" align=middle border=0 alt="i85b" src="nd.gif">[0,1,2,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;654463&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i86');"><img name="i86" align=middle border=0 alt="i86" src="nd.gif">(0,1,2,3,5,6,7,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;645652&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i87');"><img name="i87" align=middle border=0 alt="i87" src="nd.gif">(0,1,2,3,4,5,8,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;644563&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i88');"><img name="i88" align=middle border=0 alt="i88" src="nd.gif">(0,1,2,3,4,7,8,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;644464&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD><SPAN CLASS=tbf>8-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i89');"><img name="i89" align=middle border=0 alt="i89" src="nd.gif">(0,1,2,3,6,7,8,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;566452&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i810');"><img name="i810" align=middle border=0 alt="i810" src="nd.gif">(0,2,3,4,5,6,7,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;565552&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i811');"><img name="i811" align=middle border=0 alt="i811" src="nd.gif">(0,1,2,3,4,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i811b');"><img name="i811b" align=middle border=0 alt="i811b" src="nd.gif">[0,2,4,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;556543&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i812');"><img name="i812" align=middle border=0 alt="i812" src="nd.gif">(0,1,3,4,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i812b');"><img name="i812b" align=middle border=0 alt="i812b" src="nd.gif">[0,2,3,4,5,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;556453&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-13:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i813');"><img name="i813" align=middle border=0 alt="i813" src="nd.gif">(0,1,2,3,4,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i813b');"><img name="i813b" align=middle border=0 alt="i813b" src="nd.gif">[0,2,3,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;555562&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-14:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i814');"><img name="i814" align=middle border=0 alt="i814" src="nd.gif">(0,1,2,4,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i814b');"><img name="i814b" align=middle border=0 alt="i814b" src="nd.gif">[0,2,3,4,5,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;555553&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>8-Z15:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i8Z15');"><img name="i8Z15" align=middle border=0 alt="i8Z15" src="nd.gif">(0,1,2,3,4,6,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i8Z15b');"><img name="i8Z15b" align=middle border=0 alt="i8Z15b" src="nd.gif">[0,1,3,5,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>8-Z29:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i8Z29');"><img name="i8Z29" align=middle border=0 alt="i8Z29" src="nd.gif">(0,1,2,3,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i8Z29b');"><img name="i8Z29b" align=middle border=0 alt="i8Z29b" src="nd.gif">[0,2,3,4,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;554563&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-16:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i816');"><img name="i816" align=middle border=0 alt="i816" src="nd.gif">(0,1,2,3,5,7,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i816b');"><img name="i816b" align=middle border=0 alt="i816b" src="nd.gif">[0,1,2,4,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;546652&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-17:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i817');"><img name="i817" align=middle border=0 alt="i817" src="nd.gif">(0,1,3,4,5,6,8,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;546553&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-18:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i818');"><img name="i818" align=middle border=0 alt="i818" src="nd.gif">(0,1,2,3,5,6,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i818b');"><img name="i818b" align=middle border=0 alt="i818b" src="nd.gif">[0,1,3,4,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;545752&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-19:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i819');"><img name="i819" align=middle border=0 alt="i819" src="nd.gif">(0,1,2,4,5,6,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i819b');"><img name="i819b" align=middle border=0 alt="i819b" src="nd.gif">[0,1,3,4,5,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;545662&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-20:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i820');"><img name="i820" align=middle border=0 alt="i820" src="nd.gif">(0,1,2,4,5,7,8,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;474643&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-21:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i821');"><img name="i821" align=middle border=0 alt="i821" src="nd.gif">(0,1,2,3,4,6,8,A)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;465562&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-22:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i822');"><img name="i822" align=middle border=0 alt="i822" src="nd.gif">(0,1,2,3,5,6,8,A)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i822b');"><img name="i822b" align=middle border=0 alt="i822b" src="nd.gif">[0,1,3,4,5,6,8,A]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;465472&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-23:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i823');"><img name="i823" align=middle border=0 alt="i823" src="nd.gif">(0,1,2,3,5,7,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;464743&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-24:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i824');"><img name="i824" align=middle border=0 alt="i824" src="nd.gif">(0,1,2,4,5,6,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;464644&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD><SPAN CLASS=tbf>8-25:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i825');"><img name="i825" align=middle border=0 alt="i825" src="nd.gif">(0,1,2,4,6,7,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;456562&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>8-26:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i826');"><img name="i826" align=middle border=0 alt="i826" src="nd.gif">(0,1,3,4,5,7,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;456553&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>8-27:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i827');"><img name="i827" align=middle border=0 alt="i827" src="nd.gif">(0,1,2,4,5,7,8,A)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i827b');"><img name="i827b" align=middle border=0 alt="i827b" src="nd.gif">[0,1,3,4,6,7,8,A]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;448444&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(3)</SPAN></TD><TD><SPAN CLASS=tbf>8-28:</SPAN></TD><TD colspan=2><SPAN CLASS=tbf><A HREF="javascript:newset('i828');"><img name="i828" align=middle border=0 alt="i828" src="nd.gif">(0,1,3,4,6,7,9,A) {octatonic}</A></SPAN></TD></TR>
+
+
+<TR><TD bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>7 pitches, 21 intvls   (35 vectors, 66 qualities, 792 total)</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;654321&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i71');"><img name="i71" align=middle border=0 alt="i71" src="nd.gif">(0,1,2,3,4,5,6)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;554331&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i72');"><img name="i72" align=middle border=0 alt="i72" src="nd.gif">(0,1,2,3,4,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i72b');"><img name="i72b" align=middle border=0 alt="i72b" src="nd.gif">[0,2,3,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;544431&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i73');"><img name="i73" align=middle border=0 alt="i73" src="nd.gif">(0,1,2,3,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i73b');"><img name="i73b" align=middle border=0 alt="i73b" src="nd.gif">[0,3,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;544332&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i74');"><img name="i74" align=middle border=0 alt="i74" src="nd.gif">(0,1,2,3,4,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i74b');"><img name="i74b" align=middle border=0 alt="i74b" src="nd.gif">[0,1,3,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;543342&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i75');"><img name="i75" align=middle border=0 alt="i75" src="nd.gif">(0,1,2,3,5,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i75b');"><img name="i75b" align=middle border=0 alt="i75b" src="nd.gif">[0,1,2,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;533442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i76');"><img name="i76" align=middle border=0 alt="i76" src="nd.gif">(0,1,2,3,4,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i76b');"><img name="i76b" align=middle border=0 alt="i76b" src="nd.gif">[0,1,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;532353&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i77');"><img name="i77" align=middle border=0 alt="i77" src="nd.gif">(0,1,2,3,6,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i77b');"><img name="i77b" align=middle border=0 alt="i77b" src="nd.gif">[0,1,2,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;454422&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i78');"><img name="i78" align=middle border=0 alt="i78" src="nd.gif">(0,2,3,4,5,6,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;453432&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i79');"><img name="i79" align=middle border=0 alt="i79" src="nd.gif">(0,1,2,3,4,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i79b');"><img name="i79b" align=middle border=0 alt="i79b" src="nd.gif">[0,2,4,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;445332&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i710');"><img name="i710" align=middle border=0 alt="i710" src="nd.gif">(0,1,2,3,4,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i710b');"><img name="i710b" align=middle border=0 alt="i710b" src="nd.gif">[0,2,3,4,5,6,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;444441&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i711');"><img name="i711" align=middle border=0 alt="i711" src="nd.gif">(0,1,3,4,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i711b');"><img name="i711b" align=middle border=0 alt="i711b" src="nd.gif">[0,2,3,4,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;444342&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(36)</SPAN></TD><TD><SPAN CLASS=tbf>7-Z12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z12');"><img name="i7Z12" align=middle border=0 alt="i7Z12" src="nd.gif">(0,1,2,3,4,7,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>7-Z36:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z36');"><img name="i7Z36" align=middle border=0 alt="i7Z36" src="nd.gif">(0,1,2,3,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z36b');"><img name="i7Z36b" align=middle border=0 alt="i7Z36b" src="nd.gif">[0,2,3,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;443532&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-13:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i713');"><img name="i713" align=middle border=0 alt="i713" src="nd.gif">(0,1,2,4,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i713b');"><img name="i713b" align=middle border=0 alt="i713b" src="nd.gif">[0,2,3,4,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;443352&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-14:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i714');"><img name="i714" align=middle border=0 alt="i714" src="nd.gif">(0,1,2,3,5,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i714b');"><img name="i714b" align=middle border=0 alt="i714b" src="nd.gif">[0,1,3,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;442443&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-15:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i715');"><img name="i715" align=middle border=0 alt="i715" src="nd.gif">(0,1,2,4,6,7,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;435432&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-16:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i716');"><img name="i716" align=middle border=0 alt="i716" src="nd.gif">(0,1,2,3,5,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i716b');"><img name="i716b" align=middle border=0 alt="i716b" src="nd.gif">[0,1,3,4,5,6,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;434541&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-Z17:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z17');"><img name="i7Z17" align=middle border=0 alt="i7Z17" src="nd.gif">(0,1,2,4,5,6,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>7-Z37:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z37');"><img name="i7Z37" align=middle border=0 alt="i7Z37" src="nd.gif">(0,1,3,4,5,7,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;434442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>7-Z18:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z18');"><img name="i7Z18" align=middle border=0 alt="i7Z18" src="nd.gif">(0,1,4,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z18b');"><img name="i7Z18b" align=middle border=0 alt="i7Z18b" src="nd.gif">[0,2,3,4,5,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>7-Z38:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z38');"><img name="i7Z38" align=middle border=0 alt="i7Z38" src="nd.gif">(0,1,2,4,5,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i7Z38b');"><img name="i7Z38b" align=middle border=0 alt="i7Z38b" src="nd.gif">[0,1,3,4,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;434343&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-19:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i719');"><img name="i719" align=middle border=0 alt="i719" src="nd.gif">(0,1,2,3,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i719b');"><img name="i719b" align=middle border=0 alt="i719b" src="nd.gif">[0,1,2,3,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;433452&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-20:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i720');"><img name="i720" align=middle border=0 alt="i720" src="nd.gif">(0,1,2,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i720b');"><img name="i720b" align=middle border=0 alt="i720b" src="nd.gif">[0,2,3,4,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;424641&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-21:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i721');"><img name="i721" align=middle border=0 alt="i721" src="nd.gif">(0,1,2,4,5,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i721b');"><img name="i721b" align=middle border=0 alt="i721b" src="nd.gif">[0,1,3,4,5,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;424542&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-22:</SPAN></TD><TD colspan=2><SPAN CLASS=tbf><A HREF="javascript:newset('i722');"><img name="i722" align=middle border=0 alt="i722" src="nd.gif">(0,1,2,5,6,8,9) {hungar-min}</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;354351&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-23:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i723');"><img name="i723" align=middle border=0 alt="i723" src="nd.gif">(0,2,3,4,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i723b');"><img name="i723b" align=middle border=0 alt="i723b" src="nd.gif">[0,2,4,5,6,7,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;353442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-24:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i724');"><img name="i724" align=middle border=0 alt="i724" src="nd.gif">(0,1,2,3,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i724b');"><img name="i724b" align=middle border=0 alt="i724b" src="nd.gif">[0,2,4,6,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;345342&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-25:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i725');"><img name="i725" align=middle border=0 alt="i725" src="nd.gif">(0,2,3,4,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i725b');"><img name="i725b" align=middle border=0 alt="i725b" src="nd.gif">[0,2,3,5,6,7,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;344532&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-26:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i726');"><img name="i726" align=middle border=0 alt="i726" src="nd.gif">(0,1,3,4,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i726b');"><img name="i726b" align=middle border=0 alt="i726b" src="nd.gif">[0,2,4,5,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;344451&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-27:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i727');"><img name="i727" align=middle border=0 alt="i727" src="nd.gif">(0,1,2,4,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i727b');"><img name="i727b" align=middle border=0 alt="i727b" src="nd.gif">[0,2,4,5,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;344433&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-28:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i728');"><img name="i728" align=middle border=0 alt="i728" src="nd.gif">(0,1,3,5,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i728b');"><img name="i728b" align=middle border=0 alt="i728b" src="nd.gif">[0,2,3,4,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;344352&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-29:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i729');"><img name="i729" align=middle border=0 alt="i729" src="nd.gif">(0,1,2,4,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i729b');"><img name="i729b" align=middle border=0 alt="i729b" src="nd.gif">[0,2,3,5,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;343542&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-30:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i730');"><img name="i730" align=middle border=0 alt="i730" src="nd.gif">(0,1,2,4,6,8,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i730b');"><img name="i730b" align=middle border=0 alt="i730b" src="nd.gif">[0,1,3,5,7,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;336333&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-31:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i731');"><img name="i731" align=middle border=0 alt="i731" src="nd.gif">(0,1,3,4,6,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i731b');"><img name="i731b" align=middle border=0 alt="i731b" src="nd.gif">[0,2,3,5,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;335442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>7-32:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i732');"><img name="i732" align=middle border=0 alt="i732" src="nd.gif">(0,1,3,4,6,8,9) {harm-min} </SPAN></TD> <TD><SPAN CLASS=tbf><A HREF="javascript:newset('i732b');"><img name="i732b" align=middle border=0 alt="i732b" src="nd.gif">[0,1,3,5,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;262623&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-33:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i733');"><img name="i733" align=middle border=0 alt="i733" src="nd.gif">(0,1,2,4,6,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;254442&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-34:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i734');"><img name="i734" align=middle border=0 alt="i734" src="nd.gif">(0,1,3,4,6,8,A)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;254361&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>7-35:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i735');"><img name="i735" align=middle border=0 alt="i735" src="nd.gif">(0,1,3,5,6,8,A) {diatonic}</A></SPAN></TD><TD></TD></TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+<TABLE border=0 width="700">
+<COLGROUP width=350>
+<COLGROUP width=1>
+<COLGROUP width=351>
+
+<TR>
+<TD colspan=3 bgcolor=DDDDDD colspan=5><SPAN CLASS=tbh>6 pitches, 15 intvls  (35 vectors, 80 qualities, 924 total)</SPAN></TD>
+</TR>
+
+<TR>
+<TD>
+<TABLE width="100%" border=0 CELLPADDING=0 CELLSPACING=0>
+<COLGROUP align="left">
+<COLGROUP align="center">
+<COLGROUP align="center">
+<COLGROUP align="left">
+<COLGROUP align="left">
+<TR><TD><SPAN CLASS=tbf>interval</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>Forte</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">prime</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">inverted</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>vector</SPAN></TD><TD><SPAN CLASS=tbf>count</SPAN></TD><TD><SPAN CLASS=tbf> code </SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;543210&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>6-1:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i61');"><img name="i61" align=middle border=0 alt="i61" src="nd.gif">(0,1,2,3,4,5)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;443211&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-2:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i62');"><img name="i62" align=middle border=0 alt="i62" src="nd.gif">(0,1,2,3,4,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i62b');"><img name="i62b" align=middle border=0 alt="i62b" src="nd.gif">[0,2,3,4,5,6]</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;433221&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z3:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z3');"><img name="i6Z3" align=middle border=0 alt="i6Z3" src="nd.gif">(0,1,2,3,5,6)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z3b');"><img name="i6Z3b" align=middle border=0 alt="i6Z3b" src="nd.gif">[0,1,3,4,5,6]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z36:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z36');"><img name="i6Z36" align=middle border=0 alt="i6Z36" src="nd.gif">(0,1,2,3,4,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z36b');"><img name="i6Z36b" align=middle border=0 alt="i6Z36b" src="nd.gif">[0,3,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;432321&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z4:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z4');"><img name="i6Z4" align=middle border=0 alt="i6Z4" src="nd.gif">(0,1,2,4,5,6)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z37:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z37');"><img name="i6Z37" align=middle border=0 alt="i6Z37" src="nd.gif">(0,1,2,3,4,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;422232&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-5:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i65');"><img name="i65" align=middle border=0 alt="i65" src="nd.gif">(0,1,2,3,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i65b');"><img name="i65b" align=middle border=0 alt="i65b" src="nd.gif">[0,1,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;421242&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z6:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z6');"><img name="i6Z6" align=middle border=0 alt="i6Z6" src="nd.gif">(0,1,2,5,6,7)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z38:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z38');"><img name="i6Z38" align=middle border=0 alt="i6Z38" src="nd.gif">(0,1,2,3,7,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;420243&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(6)</SPAN></TD><TD><SPAN CLASS=tbf>6-7:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i67');"><img name="i67" align=middle border=0 alt="i67" src="nd.gif">(0,1,2,6,7,8)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;343230&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>6-8:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i68');"><img name="i68" align=middle border=0 alt="i68" src="nd.gif">(0,2,3,4,5,7)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;342231&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-9:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i69');"><img name="i69" align=middle border=0 alt="i69" src="nd.gif">(0,1,2,3,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i69b');"><img name="i69b" align=middle border=0 alt="i69b" src="nd.gif">[0,2,4,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;333321&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z10:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z10');"><img name="i6Z10" align=middle border=0 alt="i6Z10" src="nd.gif">(0,1,3,4,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z10b');"><img name="i6Z10b" align=middle border=0 alt="i6Z10b" src="nd.gif">[0,2,3,4,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z39:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z39');"><img name="i6Z39" align=middle border=0 alt="i6Z39" src="nd.gif">(0,2,3,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z39b');"><img name="i6Z39b" align=middle border=0 alt="i6Z39b" src="nd.gif">[0,3,4,5,6,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;333231&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z11:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z11');"><img name="i6Z11" align=middle border=0 alt="i6Z11" src="nd.gif">(0,1,2,4,5,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z11b');"><img name="i6Z11b" align=middle border=0 alt="i6Z11b" src="nd.gif">[0,2,3,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z40:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z40');"><img name="i6Z40" align=middle border=0 alt="i6Z40" src="nd.gif">(0,1,2,3,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z40b');"><img name="i6Z40b" align=middle border=0 alt="i6Z40b" src="nd.gif">[0,3,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;332232&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z12:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z12');"><img name="i6Z12" align=middle border=0 alt="i6Z12" src="nd.gif">(0,1,2,4,6,7)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z12b');"><img name="i6Z12b" align=middle border=0 alt="i6Z12b" src="nd.gif">[0,1,3,5,6,7]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z41:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z41');"><img name="i6Z41" align=middle border=0 alt="i6Z41" src="nd.gif">(0,1,2,3,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z41b');"><img name="i6Z41b" align=middle border=0 alt="i6Z41b" src="nd.gif">[0,2,5,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;324222&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z13:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z13');"><img name="i6Z13" align=middle border=0 alt="i6Z13" src="nd.gif">(0,1,3,4,6,7)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z42:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z42');"><img name="i6Z42" align=middle border=0 alt="i6Z42" src="nd.gif">(0,1,2,3,6,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;323430&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-14:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i614');"><img name="i614" align=middle border=0 alt="i614" src="nd.gif">(0,1,3,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i614b');"><img name="i614b" align=middle border=0 alt="i614b" src="nd.gif">[0,3,4,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;323421&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-15:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i615');"><img name="i615" align=middle border=0 alt="i615" src="nd.gif">(0,1,2,4,5,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i615b');"><img name="i615b" align=middle border=0 alt="i615b" src="nd.gif">[0,3,4,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;322431&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-16:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i616');"><img name="i616" align=middle border=0 alt="i616" src="nd.gif">(0,1,4,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i616b');"><img name="i616b" align=middle border=0 alt="i616b" src="nd.gif">[0,2,3,4,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;322332&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z17:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z17');"><img name="i6Z17" align=middle border=0 alt="i6Z17" src="nd.gif">(0,1,2,4,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z17b');"><img name="i6Z17b" align=middle border=0 alt="i6Z17b" src="nd.gif">[0,1,4,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z43:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z43');"><img name="i6Z43" align=middle border=0 alt="i6Z43" src="nd.gif">(0,1,2,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z43b');"><img name="i6Z43b" align=middle border=0 alt="i6Z43b" src="nd.gif">[0,2,3,6,7,8]</A></SPAN></TD></TR>
+</TABLE>
+</TD>
+
+<TD bgcolor=0> </TD>
+
+<TD>
+<TABLE width="100%" border=0 CELLPADDING=0 CELLSPACING=0>
+<COLGROUP align="left">
+<COLGROUP align="center">
+<COLGROUP align="center">
+<COLGROUP align="left">
+<COLGROUP align="left">
+<TR><TD><SPAN CLASS=tbf>interval</SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>Forte</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">prime</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">inverted</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>vector</SPAN></TD><TD><SPAN CLASS=tbf>count</SPAN></TD><TD><SPAN CLASS=tbf> code </SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD><TD><SPAN CLASS=tbf><img align=middle border=0 src="nd.gif">form</SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;322242&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-18:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i618');"><img name="i618" align=middle border=0 alt="i618" src="nd.gif">(0,1,2,5,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i618b');"><img name="i618b" align=middle border=0 alt="i618b" src="nd.gif">[0,1,3,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;313431&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z19:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z19');"><img name="i6Z19" align=middle border=0 alt="i6Z19" src="nd.gif">(0,1,3,4,7,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z19b');"><img name="i6Z19b" align=middle border=0 alt="i6Z19b" src="nd.gif">[0,1,4,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z44:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z44');"><img name="i6Z44" align=middle border=0 alt="i6Z44" src="nd.gif">(0,1,2,5,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z44b');"><img name="i6Z44b" align=middle border=0 alt="i6Z44b" src="nd.gif">[0,1,4,5,6,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;303630&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(4)</SPAN></TD><TD><SPAN CLASS=tbf>6-20:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i620');"><img name="i620" align=middle border=0 alt="i620" src="nd.gif">(0,1,4,5,8,9)</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;242412&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-21:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i621');"><img name="i621" align=middle border=0 alt="i621" src="nd.gif">(0,2,3,4,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i621b');"><img name="i621b" align=middle border=0 alt="i621b" src="nd.gif">[0,2,4,5,6,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;241422&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-22:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i622');"><img name="i622" align=middle border=0 alt="i622" src="nd.gif">(0,1,2,4,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i622b');"><img name="i622b" align=middle border=0 alt="i622b" src="nd.gif">[0,2,4,6,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;234222&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z23:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z23');"><img name="i6Z23" align=middle border=0 alt="i6Z23" src="nd.gif">(0,2,3,5,6,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z45:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z45');"><img name="i6Z45" align=middle border=0 alt="i6Z45" src="nd.gif">(0,2,3,4,6,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;233331&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z24:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z24');"><img name="i6Z24" align=middle border=0 alt="i6Z24" src="nd.gif">(0,1,3,4,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z24b');"><img name="i6Z24b" align=middle border=0 alt="i6Z24b" src="nd.gif">[0,2,4,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z46:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z46');"><img name="i6Z46" align=middle border=0 alt="i6Z46" src="nd.gif">(0,1,2,4,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z46b');"><img name="i6Z46b" align=middle border=0 alt="i6Z46b" src="nd.gif">[0,2,4,5,6,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;233241&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(48)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z25:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z25');"><img name="i6Z25" align=middle border=0 alt="i6Z25" src="nd.gif">(0,1,3,5,6,8)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z25b');"><img name="i6Z25b" align=middle border=0 alt="i6Z25b" src="nd.gif">[0,2,3,5,7,8]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z47:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z47');"><img name="i6Z47" align=middle border=0 alt="i6Z47" src="nd.gif">(0,1,2,4,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z47b');"><img name="i6Z47b" align=middle border=0 alt="i6Z47b" src="nd.gif">[0,2,3,4,7,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;232341&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z26:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z26');"><img name="i6Z26" align=middle border=0 alt="i6Z26" src="nd.gif">(0,1,3,5,7,8)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z48:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z48');"><img name="i6Z48" align=middle border=0 alt="i6Z48" src="nd.gif">(0,1,2,5,7,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;225222&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-27:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i627');"><img name="i627" align=middle border=0 alt="i627" src="nd.gif">(0,1,3,4,6,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i627b');"><img name="i627b" align=middle border=0 alt="i627b" src="nd.gif">[0,2,3,5,6,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;224322&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z28:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z28');"><img name="i6Z28" align=middle border=0 alt="i6Z28" src="nd.gif">(0,1,3,5,6,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z49:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z49');"><img name="i6Z49" align=middle border=0 alt="i6Z49" src="nd.gif">(0,1,3,4,7,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;224232&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-Z29:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z29');"><img name="i6Z29" align=middle border=0 alt="i6Z29" src="nd.gif">(0,2,3,6,7,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf></SPAN></TD><TD></TD><TD><SPAN CLASS=tbf>6-Z50:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i6Z50');"><img name="i6Z50" align=middle border=0 alt="i6Z50" src="nd.gif">(0,1,4,6,7,9)</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;224223&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>6-30:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i630');"><img name="i630" align=middle border=0 alt="i630" src="nd.gif">(0,1,3,6,7,9)</A></A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i630b');"><img name="i630b" align=middle border=0 alt="i630b" src="nd.gif">[0,2,3,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;223431&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-31:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i631');"><img name="i631" align=middle border=0 alt="i631" src="nd.gif">(0,1,4,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i631b');"><img name="i631b" align=middle border=0 alt="i631b" src="nd.gif">[0,2,4,5,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;143250&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(12)</SPAN></TD><TD><SPAN CLASS=tbf>6-32:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i632');"><img name="i632" align=middle border=0 alt="i632" src="nd.gif">(0,2,4,5,7,9) {min11}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;143241&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-33:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i633');"><img name="i633" align=middle border=0 alt="i633" src="nd.gif">(0,2,3,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i633b');"><img name="i633b" align=middle border=0 alt="i633b" src="nd.gif">[0,2,4,6,7,9]{dom11}</A></SPAN></TD><TD></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;142422&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(24)</SPAN></TD><TD><SPAN CLASS=tbf>6-34:</SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i634');"><img name="i634" align=middle border=0 alt="i634" src="nd.gif">(0,1,3,5,7,9)</A></SPAN></TD><TD><SPAN CLASS=tbf><A HREF="javascript:newset('i634b');"><img name="i634b" align=middle border=0 alt="i634b" src="nd.gif">[0,2,4,6,8,9]</A></SPAN></TD></TR>
+<TR><TD><SPAN CLASS=tbf>&lt;060603&gt;</SPAN></TD><TD><SPAN CLASS=tbc>(2)</SPAN></TD><TD><SPAN CLASS=tbf>6-35:</SPAN></TD><TD colspan=2><SPAN CLASS=tbf><A HREF="javascript:newset('i635');"><img name="i635" align=middle border=0 alt="i635" src="nd.gif">(0,2,4,6,8,A) {wholetone}</A></SPAN></TD></TR>
+</TABLE>
+</TD></TR>
+
+</TABLE>
+
+<HR>
+Totals:<BR>
+Total unique interval vectors: 200<BR>
+Total prime forms: 208 (according to the Forte designations, does not include 0, 1, 2, 10, 11, 12 element PC sets)<BR>
+Total unique qualities: 352 (the prime forms plus inversions of all PC sets shown above)<BR>
+Total pitch collections: 4096 (all of the transpositions and inversions of all PC sets shown above)<BR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,173 @@
+<HTML>
+<HEAD><TITLE>Matrix Calculator</TITLE>
+<SCRIPT>
+
+
+function tohex(z)
+{
+  if(z < 10) return z+"";
+  if(z == 10) return 'A';
+  if(z == 11) return 'B';
+  else return 'F';
+}
+
+function displaypitch(z)
+{
+  if(parent.enteredpitches[z].length > 0)  return parent.enteredpitches[z];
+  else if(parent.InputFrame.etype == 0)  return tohex(z);
+  else if(parent.sharpflatpref < 0) return parent.flatpitch[z];
+  else return parent.sharppitch[z];
+}
+
+
+</SCRIPT>
+</HEAD>
+
+<STYLE TYPE="text/css">
+<!--
+.tb
+{
+font:14px arial,helvetica;
+}
+-->
+<STYLE TYPE="text/css">
+<!--
+.tbh
+{
+font:12px times,serif;
+}
+-->
+<STYLE TYPE="text/css">
+<!--
+.tbl
+{
+font:12px arial,helvetica;
+font-weight:bold;
+}
+-->
+</STYLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<CENTER>
+
+<TABLE cellpadding=0 cellspacing=0 border=1>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+<COLGROUP align="center" width=25>
+
+<SCRIPT>
+if(parent.valid_row) {
+
+  // ** Locate and save the first and last pitches of the original row **
+  //   (used for computing labels for the "classical method")
+  orig_first = -1;
+  for(i = 0 ; i < 12 ; i++) {
+    if(parent.rd[i] < 0) continue;
+    if(orig_first < 0)  orig_first = parent.rd[i];
+    orig_last = parent.rd[i];
+  }
+
+  // ** Write out the Inversion row labels **
+  document.write("<TR height=25><TD></TD>");
+  for(h = 0 ; h < 12 ; h++) {
+    if(parent.rd[h] < 0) continue;
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh">I<SUB>');
+    if(parent.label_type == 0)
+      document.write(parent.rd[h] + "</SUB></TD>");
+    else
+      document.write( ((12+parent.rd[h]-orig_first)%12) + "</SUB></TD>");
+  }
+  document.write("<TD></TD></TR>");
+
+
+  // *** Loop through the main rows of the table ***
+
+  for(y = 0 ; y < 12 ; y++) {
+    if(parent.rd[y] < 0) continue;
+    document.write("<TR height=25>");
+    first_pitch = -1;
+    transpose = (12-(parent.rd[y]-parent.rd[0]));
+    for(x = 0 ; x < 12 ; x++) {
+      if(parent.rd[x] < 0) continue;
+      pitch = ( parent.rd[x] + transpose ) % 12;
+      if(first_pitch < 0) {
+        document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh">P<SUB>');
+        if(parent.label_type == 0)
+          document.write(pitch + "</SUB></TD>");
+        else
+          document.write( ((12+pitch-orig_first)%12) + "</SUB></TD>");
+        first_pitch = pitch;
+      }
+      document.write('<TD width=25 align=center class="tb">' + displaypitch(pitch) + "</TD>");
+    }
+
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh">R<SUB>');
+    if(parent.label_type == 0)
+      document.write(first_pitch + "</SUB></TD>");
+    else
+      document.write( ((12+first_pitch-orig_first)%12) + "</SUB></TD>");
+    document.write("</TR>");
+  }
+
+
+  // ** Write out the Retrograde-Inversion labels **
+  document.write("<TR height=25><TD></TD>");
+  for(h = 0 ; h < 12 ; h++) {
+    if(parent.rd[h] < 0) continue;
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh">RI<SUB>');
+    if(parent.label_type == 0)
+      document.write(parent.rd[h] + "</SUB></TD>");
+    else
+      document.write( ((12+parent.rd[h]-orig_first)%12) + "</SUB></TD>");
+  }
+  document.write("<TD></TD></TR>");
+}
+
+
+
+else {  // ** Write out the empty row **
+  document.write("<TR height=25><TD></TD>");
+  for(h = 0 ; h < 12 ; h++) {
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh"> &nbsp; </TD>');
+  }
+  document.write("<TD></TD></TR>");
+
+  for(y = 0 ; y < 12 ; y++) {
+    document.write("<TR height=25>");
+    first_pitch = -1;
+    for(x = 0 ; x < 12 ; x++) {
+      if(first_pitch < 0) {
+        document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh"> &nbsp; </TD>');
+        first_pitch = 0;
+      }
+      document.write("<TD width=25 align=center> &nbsp; </TD>");
+    }
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh"> &nbsp; </TD>');
+    document.write("</TR>");
+  }
+
+
+  document.write("<TR height=25><TD></TD>");
+  for(h = 0 ; h < 12 ; h++)
+    document.write('<TD width=25 align=center bordercolor="#FFFFFF" class="tbh"> &nbsp; </TD>');
+  document.write("<TD></TD></TR>");
+}
+
+
+</SCRIPT>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
+

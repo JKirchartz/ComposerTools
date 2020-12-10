@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="Javascript">
+
+var curchecks = 0;
+
+function changed_cb(new_cb) {
+  var i=0;
+
+  if(new_cb != 1) self.document.rc.sb_chk.checked = 0;
+  if(new_cb != 2) self.document.rc.sp_chk.checked = 0;
+
+  if(new_cb != 3) self.document.rc.rpmin2_chk.checked = 0;
+  if(new_cb != 4) self.document.rc.rpmaj2_chk.checked = 0;
+
+  if(new_cb != 5) self.document.rc.rp_chk.checked = 0;
+  if(new_cb != 6) self.document.rc.r0_chk.checked = 0;
+  if(new_cb != 7) self.document.rc.r2_chk.checked = 0;
+  if(new_cb != 9) self.document.rc.kh_chk.checked = 0;
+
+  if(new_cb != 11)  self.document.rc.cos1_chk.checked = 0;
+  if(new_cb != 12)  self.document.rc.cos2_chk.checked = 0;
+  if(new_cb != 13)  self.document.rc.cos3_chk.checked = 0;
+  if(new_cb != 14)  self.document.rc.cos4_chk.checked = 0;
+  if(new_cb != 15)  self.document.rc.cos5_chk.checked = 0;
+  if(new_cb != 16)  self.document.rc.cos6_chk.checked = 0;
+  if(new_cb != 17)  self.document.rc.cos7_chk.checked = 0;
+  if(new_cb != 18)  self.document.rc.cos8_chk.checked = 0;
+  if(new_cb != 19)  self.document.rc.cos9_chk.checked = 0;
+  if(new_cb != 20) self.document.rc.cos95_chk.checked = 0;
+
+  curchecks = 0;
+  if(self.document.rc.sp_chk.checked)  curchecks |= 0x1;
+  if(self.document.rc.sb_chk.checked)  curchecks |= 0x2;
+  if(self.document.rc.rp_chk.checked)  curchecks |= 0x4;
+
+  if(self.document.rc.rpmin2_chk.checked)  curchecks |= 0x40;
+  if(self.document.rc.rpmaj2_chk.checked)  curchecks |= 0x80;
+
+  if(self.document.rc.r0_chk.checked)  curchecks |= 0x8;
+  if(self.document.rc.r2_chk.checked)  curchecks |= 0x20;
+
+  if(self.document.rc.kh_chk.checked)  curchecks |= 0x200000;
+
+  if(self.document.rc.cos1_chk.checked)  curchecks |= 0x100;
+  if(self.document.rc.cos2_chk.checked)  curchecks |= 0x200;
+  if(self.document.rc.cos3_chk.checked)  curchecks |= 0x400;
+  if(self.document.rc.cos4_chk.checked)  curchecks |= 0x800;
+  if(self.document.rc.cos5_chk.checked)  curchecks |= 0x1000;
+  if(self.document.rc.cos6_chk.checked)  curchecks |= 0x2000;
+  if(self.document.rc.cos7_chk.checked)  curchecks |= 0x4000;
+  if(self.document.rc.cos8_chk.checked)  curchecks |= 0x8000;
+  if(self.document.rc.cos9_chk.checked)  curchecks |= 0x10000;
+  if(self.document.rc.cos95_chk.checked)  curchecks |= 0x20000;
+
+  parent.parent.PCSetsBody.update_dots();
+}
+
+function clear_selections() {
+  parent.parent.PCSetsBody.clear_dots();
+}
+
+</SCRIPT>
+</HEAD>
+
+<STYLE TYPE="text/css">
+<!--
+.hdf
+{
+font:10px arial,helvetica;
+}
+-->
+</STYLE>
+
+<BODY>
+<FORM name=rc>
+<SPAN class=hdf>Display all PC Sets related to <img src="bd.gif"> as follows:</SPAN>
+<TABLE  border=1 CELLPADDING=1 CELLSPACING=0>
+<TR><TD><INPUT type=checkbox NAME=sb_chk onclick="javascript:changed_cb(1)"></TD><TD><SPAN CLASS=hdf>Sub-sets</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=sp_chk onclick="javascript:changed_cb(2)"></TD><TD><SPAN CLASS=hdf>Super-sets</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rpmin2_chk onclick="javascript:changed_cb(3)"></TD><TD><SPAN CLASS=hdf>One pitch moved a half step</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rpmaj2_chk onclick="javascript:changed_cb(4)"></TD><TD><SPAN CLASS=hdf>One pitch moved a whole step</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=rp_chk onclick="javascript:changed_cb(5)"></TD><TD><SPAN CLASS=hdf>One pitch moved (any interval)</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=r0_chk onclick="javascript:changed_cb(6)"></TD><TD><SPAN CLASS=hdf>0/6 interval vector components the same</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=r2_chk onclick="javascript:changed_cb(7)"></TD><TD><SPAN CLASS=hdf>4/6 interval vector components the same</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=kh_chk onclick="javascript:changed_cb(9)"></TD><TD><SPAN CLASS=hdf>Set subcomplex (Kh)</SPAN></TD></TR>
+<TR><TD colspan=2><SPAN class=hdf>Interval Vector Cosine Similarity:</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos95_chk onclick="javascript:changed_cb(20)"></TD><TD><SPAN CLASS=hdf>&gt;95%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos9_chk onclick="javascript:changed_cb(19)"></TD><TD><SPAN CLASS=hdf>&gt;90%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos8_chk onclick="javascript:changed_cb(18)"></TD><TD><SPAN CLASS=hdf>&gt;80%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos7_chk onclick="javascript:changed_cb(17)"></TD><TD><SPAN CLASS=hdf>&gt;70%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos6_chk onclick="javascript:changed_cb(16)"></TD><TD><SPAN CLASS=hdf>&gt;60%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos5_chk onclick="javascript:changed_cb(15)"></TD><TD><SPAN CLASS=hdf>&gt;50%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos4_chk onclick="javascript:changed_cb(14)"></TD><TD><SPAN CLASS=hdf>&gt;40%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos3_chk onclick="javascript:changed_cb(13)"></TD><TD><SPAN CLASS=hdf>&gt;30%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos2_chk onclick="javascript:changed_cb(12)"></TD><TD><SPAN CLASS=hdf>&gt;20%</SPAN></TD></TR>
+<TR><TD><INPUT type=checkbox NAME=cos1_chk onclick="javascript:changed_cb(11)"></TD><TD><SPAN CLASS=hdf>&gt;10%</SPAN></TD></TR>
+</TABLE>
+<SCRIPT>
+self.document.rc.sb_chk.checked = 1;
+curchecks = 0x2;
+</SCRIPT>
+</BODY></HTML>

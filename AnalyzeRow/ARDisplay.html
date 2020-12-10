@@ -1,0 +1,478 @@
+<HTML>
+<HEAD><TITLE>Analyze Row</TITLE>
+<SCRIPT>
+
+var numcolpitches;  // typically equal to opener.numpitches
+var IvecTotals = new Array(6);
+var doIvecTotals;
+var doCommonNames;
+
+function ClearIvecTotals()
+{
+  IvecTotals[0] = 0;
+  IvecTotals[1] = 0;
+  IvecTotals[2] = 0;
+  IvecTotals[3] = 0;
+  IvecTotals[4] = 0;
+  IvecTotals[5] = 0;
+}
+
+function tohex(z)
+{
+  if(z < 10) return z+"";
+  if(z == 10) return 'A';
+  if(z == 11) return 'B';
+  else return 'F';
+}
+
+function displaypitch(z)
+{
+  if(opener.etype == 0)  return tohex(z);
+  else if(opener.enteredpitches[z].length > 0)  return opener.enteredpitches[z];
+  else if(opener.sharpflatpref < 0) return opener.flatpitch[z];
+  else return opener.sharppitch[z];
+}
+
+var PCSetPitches = new Array(12);
+var card = 0;  // cardinality = number of boxes checked
+var FinalTranspose = 0;
+var IsInversion = 0;
+
+var PrimeSet;
+var ForteCode;
+var IntvVec;
+var InversionSet;
+var CommonDescPrime;
+var CommonDescInver;
+
+function ClearPitches() {
+  for(i = 0 ; i < 12 ; i++)
+    PCSetPitches[i] = 0;
+}
+
+
+// Note: following two arrays contain 2*card elements
+//   the first (0) -> (card-1) elements contain the original check box numbers
+//   the second (card) -> (2*card - 1) elements contain
+//             the original check box numbers plus 12
+//
+// This is done to make it easier to compute rotations (when looking for the normal form)
+
+var pcOriginal = new Array(24);   // original checked numbers
+var pcInversion = new Array(24);  // inversions of the checked numbers (12-x)
+
+function ComputeAndOutputPCSet()
+{
+  // Compute Cardinality and create 1st half of the pcOriginal array
+  card = 0;
+  for(i = 0 ; i < 12 ; i++) {
+    if(PCSetPitches[i]) {
+      pcOriginal[card] = i;
+      card++;
+    }
+  }
+
+  if(card == 0)
+    return;
+
+  // create the second half of the pcOriginal array (see above)
+  for(i = 0 ; i < card ; i++)
+    pcOriginal[card+i] = pcOriginal[i] + 12;
+
+  // create pcInversion array
+  for(i = 0 ; i < card ; i++) {
+    pcInversion[i] = 12 - pcOriginal[card-i-1];
+    pcInversion[card+i] = pcInversion[i] + 12;
+  }
+
+  ComputePrime();
+}       
+
+
+var isForte;
+
+var pcOrigPPrime = new Array(12);
+var pcInvPPrime = new Array(12);
+var pcPrime = new Array(12);
+var OriginalTranspose;
+var InversionTranspose;
+
+function ComputePrime()
+{
+  var pcCondensed = "";
+  var sTmp = "";
+  var fortePos = 0;
+  var ivecPos = -1;
+  var icodePos = -1;
+  var inverPos = -1;
+  var descpPos = -1;
+  var desciPos = -1;
+
+  if(card == 0) return;
+
+  isForte = 1;
+
+  ComputePartialPrime(pcOriginal, pcOrigPPrime, 0);
+  ComputePartialPrime(pcInversion, pcInvPPrime, 1);
+  ComparePartialPrimes();
+
+  // Output Array
+  PrimeSet = "";
+  for(i = 0 ; i < card ; i++) {
+     if(i > 0)  PrimeSet = PrimeSet + "," + pcPrime[i];
+     else PrimeSet = PrimeSet + pcPrime[i];
+  }
+
+  // *** Locate and output other information
+
+  // Compute condensed array
+  for(i = 0 ; i < card ; i++)
+     pcCondensed = pcCondensed + pcPrime[i].toString(16).toUpperCase();
+  if(card == 0) pcCondensed = "-";
+
+  sTmp = opener.primedata[pcCondensed];
+  // Find the semi-colons
+  sc1 = sTmp.indexOf(";");
+  sc2 = sTmp.indexOf(";", sc1+1);
+  sc3 = sTmp.indexOf(";", sc2+1);
+  sc4 = sTmp.indexOf(";", sc3+1);
+  sc5 = sTmp.indexOf("/", sc4+1);
+
+  fortePos = 0;
+  ForteCode = "";
+  IntvVec = "";
+  InversionSet = "";
+  CommonDescPrime = "";
+  CommonDescInv = "";
+
+  ivecPos = sTmp.indexOf(";");
+  if(ivecPos >= 0) {
+    ForteCode = sTmp.substring(0, ivecPos);
+    ivecPos++;
+    icodePos = sTmp.indexOf(";", ivecPos);
+    if(icodePos >= 0) {
+      IntvVec = sTmp.substring(ivecPos+1, icodePos-1); // remove <> from ivec
+      icodePos++;
+      inverPos = sTmp.indexOf(";", icodePos);
+      if(inverPos >= 0) {
+        // Ignore the internal code for now
+        inverPos++;
+        descpPos = sTmp.indexOf(";", inverPos);
+        if(descpPos >= 0) {
+          InversionSet = sTmp.substring(inverPos, descpPos);
+          descpPos++;
+          desciPos = sTmp.indexOf("/", descpPos);
+          if(desciPos >= 0) {
+            CommonDescPrime = sTmp.substring(descpPos, desciPos);
+            desciPos++;
+            CommonDescInv = sTmp.substring(desciPos, 99999);
+          }
+          else
+            CommonDescPrime = sTmp.substring(descpPos, 99999);
+        }
+        else
+          InversionSet = sTmp.substring(inverPos, 99999);
+      }
+    }
+    else
+      IntvVec = sTmp.substring(ivecPos+1, 99999);
+  }
+  // If no semi-colons: error - don't set anything
+
+  if(ForteCode == " ") ForteCode = "";
+  if(InversionSet == " ") InversionSet = "";
+}
+
+
+function ComputePartialPrime(pc, pcout, isinver)
+{
+  var best = 0;    // The best rotation found so far
+  var adj = 0;     // Adjustment applied based on the algorithm type (Temp var)
+
+  // Find the best rotation
+
+  for(i = 1 ; i < card ; i++) {
+    // Test to see if the size of the set is smaller than we've found so far
+    if( (pc[i+card-1] - pc[i]) < (pc[best+card-1] - pc[best]) ) {
+      best = i;
+      continue;
+    }
+
+    // Test to see if the sizes are the same, if so, we go into tie-breaker mode
+    if( (pc[i+card-1] - pc[i]) == (pc[best+card-1] - pc[best]) ) {
+      for(j = 1 ; j < (card-1) ; j++ ) {
+        if(isForte)  adj = j;
+        else         adj = card-j-1;
+
+        // is the new interval better?
+        if( (pc[i+adj] - pc[i]) < (pc[best+adj] - pc[best]) )  {
+          best = i;  // then it becomes the best and we're done
+          break;
+        }
+        // is the new interval worse?
+        else if( (pc[i+adj] - pc[i]) > (pc[best+adj] - pc[best]) )
+          break;  // then the old best is still best and we're done
+
+        // otherwise, we are still tied, so keep looking
+      }
+    }
+  }
+
+  // Found the best rotation, so now copy it into pcout and transpose down
+  for(i = 0 ; i < card ; i++)
+    pcout[i] = pc[best+i] - pc[best];
+
+  if(isinver)
+    InversionTranspose = (12 - (pc[best+card-1]%12))%12;
+  else
+    OriginalTranspose = pc[best] % 12;
+}
+
+
+function ComparePartialPrimes()
+{
+  var bestPrime = 0;  // Assume pcOrigPrime is best until we know otherwise
+
+  for(i = 0 ; i < card ; i++) {
+    if(isForte)  adj = i;
+    else         adj = card-i-1;
+
+    // is the new interval better?
+    if( (pcInvPPrime[adj] - pcInvPPrime[0]) < (pcOrigPPrime[adj] - pcOrigPPrime[0]) )  {
+      bestPrime = 1;  // then inverted form becomes the best and we're done
+      break;
+    }
+    // is the new interval worse?
+    else if( (pcInvPPrime[adj] - pcInvPPrime[0]) > (pcOrigPPrime[adj] - pcOrigPPrime[0]) )
+      break;  // then the original is definitiely best and we're done
+
+    // otherwise, we are still tied, so keep looking
+  }
+
+  if(bestPrime == 0) {
+    for(i = 0 ; i < card ; i++)  pcPrime[i] = pcOrigPPrime[i];
+    FinalTranspose = OriginalTranspose;
+    IsInversion = 0;
+  }
+  else {
+    for(i = 0 ; i < card ; i++)  pcPrime[i] = pcInvPPrime[i];
+    IsInversion = 1;
+    FinalTranspose = InversionTranspose;
+  }
+}
+
+
+// ***** 
+// Output a single row of the table
+// *****
+
+// s = the starting position within the row to analyze
+// n = the number of pitches to analyze
+function AnalyzeAndOutput(s, n)
+{
+  document.write("<TR>");
+  ClearPitches();
+  for(p = 0 ; p < n ; p++) {
+    if(opener.rd[s+p] >= 0)
+      PCSetPitches[opener.rd[s+p]] = 1;
+  }
+
+  ComputeAndOutputPCSet();
+  if(ForteCode == "")
+    document.write("<TD><SPAN class=tbdata>&nbsp;</SPAN></TD>");
+  else
+    document.write("<TD><SPAN class=tbdata>" + ForteCode + "</SPAN></TD>");
+  if(CommonDescPrime == "" || !doCommonNames)
+    document.write("<TD><SPAN class=tbdata>(" + PrimeSet + ")</SPAN></TD>");
+  else
+    document.write("<TD><SPAN class=tbdata>(" + PrimeSet + ") {" + CommonDescPrime + "}</SPAN></TD>");
+  if(InversionSet == "")
+    document.write("<TD><SPAN class=tbdata>&nbsp</SPAN></TD>");
+  else {
+    if(CommonDescInv == "" || !doCommonNames)
+      document.write("<TD><SPAN class=tbdata>" + InversionSet + "</SPAN></TD>");
+    else
+      document.write("<TD><SPAN class=tbdata>" + InversionSet + 
+                     ") {" + CommonDescInv + "}</SPAN></TD>");
+  }
+  document.write("<TD><SPAN class=tbdata>&lt;" + IntvVec + "&gt;</SPAN></TD>");
+
+  if(IntvVec.length >= 6) {
+    IvecTotals[0] = IvecTotals[0] + parseInt(IntvVec.substring(0,1),16);
+    IvecTotals[1] = IvecTotals[1] + parseInt(IntvVec.substring(1,2),16);
+    IvecTotals[2] = IvecTotals[2] + parseInt(IntvVec.substring(2,3),16);
+    IvecTotals[3] = IvecTotals[3] + parseInt(IntvVec.substring(3,4),16);
+    IvecTotals[4] = IvecTotals[4] + parseInt(IntvVec.substring(4,5),16);
+    IvecTotals[5] = IvecTotals[5] + parseInt(IntvVec.substring(5,6),16);
+  }
+
+  for(p = 0 ; p < 12 ; p++) {
+    if(opener.rd[p] < 0) continue;
+    if(p < s || p > (s+n-1) ) document.write("<TD width=20><SPAN class=tbdata>&nbsp;</SPAN></TD>");
+    else {
+      document.write('<TD width=20 align=center bgcolor="#CCEECC"><SPAN class=tbpitch>' + 
+                     displaypitch(opener.rd[p]));
+      if(opener.rd[p] == FinalTranspose) {
+        if(IsInversion)
+          document.write("<sup>&nbsp;I</sup></SPAN></TD>");
+        else
+          document.write("<sup>&nbsp;P</sup></SPAN></TD>");
+      }
+      else {
+        document.write("</SPAN></TD>");
+      }
+    }
+  }
+  document.write("</TR>");
+}
+
+//******
+// Output Interval Vector Totals
+//******
+
+function OutputIvecTotals()
+{
+  document.write('<TR bgcolor="#CCCCCC">');
+  document.write("<TD colspan=3><SPAN class=tbdata>Interval Vector Total:</SPAN></TD>");
+  document.write("<TD colspan=13 align=left><SPAN class=tbdata>&lt; ");
+  for(i = 0 ; i < 6 ; i++) {
+    if(i == 0) document.write(IvecTotals[0]);
+    else document.write("," + IvecTotals[i]);
+  }
+  document.write(" &gt;</SPAN></TD></TR>");
+}
+
+
+</SCRIPT>
+</HEAD>
+
+<STYLE TYPE="text/css">
+<!--
+.tbdata
+{
+font:10px arial,helvetica;
+
+}
+-->
+<!--
+.tbpitch
+{
+font:10px arial,helvetica;
+}
+-->
+<!--
+.tbh
+{
+font:10px arial,helvetica;
+}
+-->
+<!--
+.tini
+{
+font:8px arial,helvetica;
+font-weight:bold;
+}
+-->
+<!--
+.notes
+{
+font:12px arial,helvetica;
+}
+-->
+</STYLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<CENTER>
+
+<TABLE border=1 cellpadding=2 cellspacing=0>
+<COLGROUP align="left">
+<COLGROUP align="left">
+<COLGROUP align="left">
+<COLGROUP align="center">
+
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<COLGROUP align="center" width=20>
+<SCRIPT>
+numcolpitches = opener.numpitches;
+if(numcolpitches < 2)  numcolpitches = 12;
+doIvecTotals = opener.document.InputForm.doivectotals.checked;
+doCommonNames = opener.document.InputForm.docommon.checked;
+
+document.write('<TR><TD colspan=4><SPAN style="font:10px arial,helvetica;">original row:</SPAN></TD>');
+
+for(p = 0 ; p < numcolpitches ; p++) {
+  if(p < opener.numpitches)
+    document.write("<TD><SPAN class=tbdata>" + displaypitch(opener.rd[p]) + "</SPAN></TD>");
+  else
+    document.write("<TD><SPAN class=tbdata>&nbsp;</SPAN></TD>");
+}
+document.write("</TR>");
+</SCRIPT>
+
+<TR bgcolor="#CCCCCC"><TD><SPAN class=tbh>Forte<BR>code</SPAN></TD>
+<TD><SPAN class=tbh>prime form</SPAN></TD>
+<TD><SPAN class=tbh>inversion<BR>form</SPAN></TD><TD><SPAN class=tbh>interval<BR>vector</SPAN></TD>
+
+<SCRIPT>
+document.write("<TD colspan=" + numcolpitches + "><SPAN class=tbh>pitches</SPAN></TD>");
+document.write("</TR>");
+
+if(opener.sort_type == 0) {
+  // Loop through all possible sizes of PC Sets => 'n' = Num Pitches
+  for(n = 2 ; n <= opener.numpitches ; n++) {
+    // Loop through all possible sets in the row of size 'n'
+    //      's' = starting point for pitch class set
+    if(n > 2) {
+      document.write("<TR><TD height=3 colspan=16>");
+      document.write("</TD></TR>");
+    }
+
+    if(doIvecTotals)
+      ClearIvecTotals();
+    for(s = 0 ; s <= (opener.numpitches - n) ; s++) {
+      AnalyzeAndOutput(s, n);
+    }
+    if(doIvecTotals)
+      OutputIvecTotals();
+  }
+}
+else {
+  // Loop through all positions within the row:  's' = starting position in row
+  for(s = 0 ; s < (opener.numpitches-1) ; s++) {
+    if(s != 0) {
+      document.write("<TR><TD height=3 colspan=16>");
+      document.write("</TD></TR>");
+    }
+
+    // Loop through all possible sizes of PC sets:  'n' = size of PC Set
+    for(n = 2 ; n <= (opener.numpitches - s) ; n++) {
+      AnalyzeAndOutput(s, n);
+    }
+  }
+}
+
+</SCRIPT>
+</TABLE>
+<BR>
+<TABLE>
+<TR><TD>Notes:</TD>
+<TD width=20 align=center><SPAN class=notes><sup>P</sup></SPAN></TD>
+<TD><SPAN class=notes>Denotes the pitch which corresponds to the "0" in the <i>Prime</i> form of the PC Set</SPAN></TD></TR>
+<TR><TD></TD>
+<TD width=20 align=center><SPAN class=notes><sup>I</sup></SPAN></TD>
+<TD><SPAN class=notes>Denotes the pitch which corresponds to the "0" in the <i>Inverted</i> form of the PC Set</SPAN></TD></TR>
+</TABLE>
+</CENTER>
+</BODY>
+</HTML>
+

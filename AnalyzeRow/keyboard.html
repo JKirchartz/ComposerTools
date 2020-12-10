@@ -1,0 +1,218 @@
+<HTML>
+<HEAD>
+<TITLE>Matrix Keyboard</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function toint(z)
+{
+  if(z == 'A' || z == 'a') return 10;
+  if(z == 'B' || z == 'b') return 11;
+  else if(z.length == 0) return 0;
+  else {
+    y = parseInt(z,10);
+    if(isNaN(y)) return -1;
+    if(y >= 0 && y <= 11) return y;
+    else return -1;
+  }
+}
+
+function nametoint(p)
+{
+  if(p.length == 0) {
+    return 0;
+  }
+
+  x = opener.lettertonum[ (p.substring(0,1)).toUpperCase() ];
+  if(x == "undefined" || x < 0 || x > 11) return -1;
+  if( p.substring(1,2) == '+' || p.substring(1,2) == '#' )
+    x++;
+  else if( p.substring(1,2) == '-' || p.substring(1,2) == 'b' )
+    x--;
+
+  return x;
+}
+
+var KeyToggles = new Array(12);
+KeyToggles[0] = 0;
+KeyToggles[1] = 0;
+KeyToggles[2] = 0;
+KeyToggles[3] = 0;
+KeyToggles[4] = 0;
+KeyToggles[5] = 0;
+KeyToggles[6] = 0;
+KeyToggles[7] = 0;
+KeyToggles[8] = 0;
+KeyToggles[9] = 0;
+KeyToggles[10] = 0;
+KeyToggles[11] = 0;
+
+
+var sharppitch = new Array(12)
+sharppitch[0] = 'C';
+sharppitch[1] = 'C#';
+sharppitch[2] = 'D';
+sharppitch[3] = 'D#';
+sharppitch[4] = 'E';
+sharppitch[5] = 'F';
+sharppitch[6] = 'F#';
+sharppitch[7] = 'G';
+sharppitch[8] = 'G#';
+sharppitch[9] = 'A';
+sharppitch[10] = 'A#';
+sharppitch[11] = 'B';
+
+var flatpitch = new Array(12)
+flatpitch[0] = 'C';
+flatpitch[1] = 'Db';
+flatpitch[2] = 'D';
+flatpitch[3] = 'Eb';
+flatpitch[4] = 'E';
+flatpitch[5] = 'F';
+flatpitch[6] = 'Gb';
+flatpitch[7] = 'G';
+flatpitch[8] = 'Ab';
+flatpitch[9] = 'A';
+flatpitch[10] = 'Bb';
+flatpitch[11] = 'B';
+
+
+function getCurPitch(p)
+{
+  pitch = eval("opener.document.InputForm.row" + p.toString(16).toUpperCase() + 
+       ".value");
+  if(pitch.length > 0) {
+    if(opener.etype == 0)
+      return toint(pitch);
+    else
+      return nametoint(pitch);
+  }
+  return -1;
+}
+
+
+function refreshKeyboard(clearfirst) {
+  if(clearfirst) {
+    for(i = 0 ; i < 12 ; i++)
+      updateKeyToggle(i, 0);
+  }
+
+  for(i = 0 ; i < 12 ; i++) {
+    npitch = getCurPitch(i);
+    if(npitch >= 0)
+      updateKeyToggle(npitch, 1);
+  }
+}
+
+function updateKeyToggle(k, v) 
+{
+  var wasOn = (KeyToggles[k] > 0);
+  var isOn;
+
+  if(v == 1)
+    KeyToggles[k]++;
+  else if(v == -1)
+    KeyToggles[k]--;
+  else if(v == 0)
+    KeyToggles[k] = 0;
+
+  if(KeyToggles[k] < 0)  KeyToggles[k] = 0;
+  isOn = (KeyToggles[k] > 0);
+
+  if( wasOn != isOn ) {
+    if(isOn)
+      document["kt"+k].src = "KBTop" + k + "On.gif";
+    else
+      document["kt"+k].src = "KBTop" + k + "Off.gif";
+  }
+}
+
+function startagain()
+{
+  opener.cleardata();
+
+  for(i = 0 ; i < 12 ; i++)
+    updateKeyToggle(i, 0);
+}
+
+function keyboardKey(z)
+{
+  var SorF;
+
+  npitch = getCurPitch(opener.curfocus);
+  if(npitch >= 0)
+    updateKeyToggle(npitch, -1);
+
+  if(opener.etype == 0) {
+    eval("opener.document.InputForm.row" + opener.curfocus.toString(16).toUpperCase() + 
+         ".value='" + z.toString(16) + "'");
+  }
+  else {
+    if(SorFForm.acctype[0].checked)
+      SorF = document.SorFForm.acctype[0].value;
+    else
+      SorF = document.SorFForm.acctype[1].value;
+
+    if(SorF == 0)
+      pitch = sharppitch[z];
+    else
+      pitch = flatpitch[z];
+
+    eval("opener.document.InputForm.row" + opener.curfocus.toString(16).toUpperCase() + 
+         ".value='" + pitch + "'");
+  }
+  updateKeyToggle(z, 1);
+  opener.curfocus = (opener.curfocus+1)%12;
+}
+
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="#FFFFFF" onfocus="refreshKeyboard(1)">
+<center>
+
+<NOBR><IMG name="kt0" SRC="KBTop0Off.gif" ALT="Status of Pitch (0)" border=0 height=11 width=27><IMG name="kt1" SRC="KBTop1Off.gif" ALT="Status of Pitch (1)" border=0 height=11 width=21><IMG name="kt2" SRC="KBTop2Off.gif" ALT="Status of Pitch (2)" border=0 height=11 width=18><IMG name="kt3" SRC="KBTop3Off.gif" ALT="Status of Pitch (3)" border=0 height=11 width=21><IMG name="kt4" SRC="KBTop4Off.gif" ALT="Status of Pitch (4)" border=0 height=11 width=27><IMG name="kt5" SRC="KBTop5Off.gif" ALT="Status of Pitch (5)" border=0 height=11 width=24><IMG name="kt6" SRC="KBTop6Off.gif" ALT="Status of Pitch (6)" border=0 height=11 width=21><IMG name="kt7" SRC="KBTop7Off.gif" ALT="Status of Pitch (7)" border=0 height=11 width=19><IMG name="kt8" SRC="KBTop8Off.gif" ALT="Status of Pitch (8)" border=0 height=11 width=20><IMG name="kt9" SRC="KBTop9Off.gif" ALT="Status of Pitch (9)" border=0 height=11 width=17><IMG name="kt10" SRC="KBTop10Off.gif" ALT="Status of Pitch (10)" border=0 height=11 width=21><IMG name="kt11" SRC="KBTop11Off.gif" ALT="Status of Pitch (11)" border=0 height=11 width=29></NOBR><BR><IMG ismap SRC="keyboard.gif" BORDER=0 ALIGN=top alt="keyboard"
+USEMAP="#keyboard">
+
+<map name="keyboard">
+<area shape=rect COORDS="  0,  1,  26, 56" HREF="javascript:keyboardKey(0)"  alt="C (0)">
+<area shape=rect COORDS="  0, 57,  37, 85" HREF="javascript:keyboardKey(0)"  alt="C (0)">
+<area shape=rect COORDS=" 28,  1,  47, 56" HREF="javascript:keyboardKey(1)"  alt="C#/Db (1)">
+<area shape=rect COORDS=" 48,  1,  66, 56" HREF="javascript:keyboardKey(2)"  alt="D (2)">
+<area shape=rect COORDS=" 40, 57,  76, 85" HREF="javascript:keyboardKey(2)"  alt="D (2)">
+<area shape=rect COORDS=" 67,  1,  88, 56" HREF="javascript:keyboardKey(3)"  alt="D#/Eb (3)">
+<area shape=rect COORDS=" 88,  1, 112, 56" HREF="javascript:keyboardKey(4)"  alt="E (4)">
+<area shape=rect COORDS=" 78, 57, 112, 85" HREF="javascript:keyboardKey(4)"  alt="E (4)">
+<area shape=rect COORDS="114,  1, 137, 56" HREF="javascript:keyboardKey(5)"  alt="F (5)">
+<area shape=rect COORDS="114, 57, 149, 85" HREF="javascript:keyboardKey(5)"  alt="F (5)">
+<area shape=rect COORDS="138,  1, 159, 56" HREF="javascript:keyboardKey(6)"  alt="F#/Gb (6)">
+<area shape=rect COORDS="160,  1, 178, 56" HREF="javascript:keyboardKey(7)"  alt="G (7)">
+<area shape=rect COORDS="151, 57, 188, 85" HREF="javascript:keyboardKey(7)"  alt="G (7)">
+<area shape=rect COORDS="179,  1, 198, 56" HREF="javascript:keyboardKey(8)"  alt="G#/Ab (8)">
+<area shape=rect COORDS="156,  1, 215, 56" HREF="javascript:keyboardKey(9)"  alt="A (9)">
+<area shape=rect COORDS="190, 57, 226, 85" HREF="javascript:keyboardKey(9)"  alt="A (9)">
+<area shape=rect COORDS="216,  1, 237, 56" HREF="javascript:keyboardKey(10)" alt="A#/Bb (10)">
+<area shape=rect COORDS="238,  1, 265, 56" HREF="javascript:keyboardKey(11)" alt="B (11)">
+<area shape=rect COORDS="228, 57, 265, 85" HREF="javascript:keyboardKey(11)" alt="B (11)">
+</map>
+<BR>
+<SCRIPT>
+  if(opener.etype) {
+    document.write("<FORM NAME=SorFForm>");
+    document.write("<TABLE border=0 cellspacing=0 cellpadding=0><TR>");
+    document.write("<TD><INPUT TYPE=radio NAME=acctype VALUE=0 CHECKED>enter sharps</TD>");
+    document.write("<TD width=30></TD>");
+    document.write("<TD><INPUT TYPE=radio NAME=acctype VALUE=1>enter flats</TD>");
+    document.write("</TR>");
+    document.write("</TABLE>");
+    document.write("</FORM>");
+  }
+  else {
+    document.write("<P>");
+  }
+
+refreshKeyboard(0);
+</SCRIPT>
+<A href="javascript:startagain()">start over</A>
+</center>
+</BODY>
+</HTML>
